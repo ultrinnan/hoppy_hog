@@ -217,7 +217,7 @@ table {
 
 body {
   background: #00181f url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
-  background-size: cover; }
+  background-size: auto; }
 
 .wrapper {
   width: 100%;
@@ -315,6 +315,10 @@ body {
   bottom: 0;
   font-size: 16px; }
 
+.sorts-screen {
+  background: url("../images/sorts-bg.png") 50% 0 no-repeat;
+  background-size: cover; }
+
 .description {
   display: flex;
   flex-direction: row;
@@ -325,3 +329,7 @@ body {
   .description p {
     max-width: 48%;
     text-align: justify; }
+
+.sorts {
+  columns: 3;
+  text-align: center; }

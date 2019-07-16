@@ -3,7 +3,7 @@
 @import "typography";
 body{
   background: $bgColor url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 .wrapper{
   width: 100%;
@@ -127,6 +127,13 @@ body{
   bottom: 0;
   font-size: 16px;
 }
+
+
+.sorts-screen{
+  //margin: 64px 0;
+  background: url("../images/sorts-bg.png") 50% 0 no-repeat;
+  background-size: cover;
+}
 .description{
   display: flex;
   flex-direction: row;
@@ -138,4 +145,9 @@ body{
     max-width: 48%;
     text-align: justify;
   }
+}
+
+.sorts{
+  columns: 3;
+  text-align: center;
 }
