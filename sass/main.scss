@@ -2,12 +2,15 @@
 @import 'variables';
 @import "typography";
 body{
-  background-color: $bgColor;
+  background: $bgColor url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
+  background-size: cover;
 }
 .wrapper{
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 //header
 
@@ -64,14 +67,12 @@ body{
 
 //front page
 .front-screen{
-  background: url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
-  background-size: cover;
+  //background: url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
+  //background-size: cover;
   height: 100vh;
   position: relative;
   overflow: hidden;
-  //padding-top:300px;
 }
-
 
   //height: 738px;
   //position: relative;
@@ -105,10 +106,36 @@ body{
       display: block;
       line-height: 38px;
     }
-    .slogan-small{
-      color: white;
-      font-family: Cambria, sans-serif;
-      font-size: 15px;
-    }
+
 
   }
+
+.slogan-small {
+  color: white;
+  font-family: Cambria, sans-serif;
+  font-size: 16px;
+
+}
+.slogan::after {
+  position: absolute;
+  content: '⌄';
+  width: 16px;
+  height: 8px;
+  left: 50%;
+  margin-left: -5px;
+  color: #fff;
+  bottom: 0;
+  font-size: 16px;
+}
+.description{
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: space-between;
+  font-family: Cambria, sans-serif;
+  font-size: 16px;
+  p{
+    max-width: 48%;
+    text-align: justify;
+  }
+}
