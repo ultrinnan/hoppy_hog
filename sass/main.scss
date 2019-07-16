@@ -133,6 +133,19 @@ body{
   //margin: 64px 0;
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
   background-size: cover;
+  position: relative;
+  &:after{
+    content: '';
+    width: 833px;
+    height: 356px;
+    background: url("../images/beer.png") 50% 50% no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    margin-left: -416px;
+    bottom: 0;
+    margin-bottom: -178px;
+  }
 }
 .description{
   display: flex;
@@ -141,6 +154,7 @@ body{
   justify-content: space-between;
   font-family: Cambria, sans-serif;
   font-size: 16px;
+  margin: 32px 0 64px 0;
   p{
     max-width: 48%;
     text-align: justify;
@@ -150,4 +164,37 @@ body{
 .sorts{
   columns: 3;
   text-align: center;
+  padding-bottom: 120px;
+  .sort-box{
+    display: inline-block;
+    margin-bottom: 24px;
+    img{
+      max-width: max-content;
+    }
+    span{
+      color: #cdb9a3;
+      font-family: Cambria, sans-serif;
+      font-size: 16px;
+      max-width: 200px;
+      display: inline-block;
+    }
+  }
+}
+
+.facts-screen{
+  background: $factsBgColor;
+
+  .wrapper{
+    padding-top: 180px;
+    color: #fff;
+    font-family: Cambria, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .fact{
+    max-width: 30%;
+  }
 }

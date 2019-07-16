@@ -213,7 +213,14 @@ table {
 @font-face {
   font-family: "Cambria";
   font-style: normal;
+  font-weight: 300;
   src: url("../fonts/cambria/Cambria.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Cambria";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/cambria/cambriab.ttf") format("truetype"); }
 
 body {
   background: #00181f url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
@@ -317,7 +324,19 @@ body {
 
 .sorts-screen {
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+  .sorts-screen:after {
+    content: '';
+    width: 833px;
+    height: 356px;
+    background: url("../images/beer.png") 50% 50% no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    margin-left: -416px;
+    bottom: 0;
+    margin-bottom: -178px; }
 
 .description {
   display: flex;
@@ -325,11 +344,38 @@ body {
   color: #fff;
   justify-content: space-between;
   font-family: Cambria, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 32px 0 64px 0; }
   .description p {
     max-width: 48%;
     text-align: justify; }
 
 .sorts {
   columns: 3;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 120px; }
+  .sorts .sort-box {
+    display: inline-block;
+    margin-bottom: 24px; }
+    .sorts .sort-box img {
+      max-width: max-content; }
+    .sorts .sort-box span {
+      color: #cdb9a3;
+      font-family: Cambria, sans-serif;
+      font-size: 16px;
+      max-width: 200px;
+      display: inline-block; }
+
+.facts-screen {
+  background: #6b5b4b; }
+  .facts-screen .wrapper {
+    padding-top: 180px;
+    color: #fff;
+    font-family: Cambria, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .facts-screen .fact {
+    max-width: 30%; }
