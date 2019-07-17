@@ -474,3 +474,30 @@ body {
   padding: 48px 0; }
   .main-slider img {
     width: 100%; }
+
+.trigger {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Cambria, sans-serif;
+  font-size: 15px;
+  color: #fff; }
+  .trigger .trigger-img {
+    flex: 0 0 160px; }
+    .trigger .trigger-img img {
+      width: 180%;
+      margin-left: -45%; }
+  .trigger h4 {
+    font-family: Cambria, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #cdbca3; }
+
+.trigger-header-left {
+  text-align: right;
+  margin: 8px -72px 32px; }
+
+.trigger-header-right {
+  margin: 8px -16px 32px; }
