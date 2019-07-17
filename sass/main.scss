@@ -234,6 +234,7 @@ body{
 
 .articles-screen{
   background-color: $articlesBgColor;
+  padding: 88px 0;
 }
 .article-slider{
   max-width: 955px;
@@ -241,7 +242,7 @@ body{
   flex-direction: row;
   justify-content: space-around;
   .article-img{
-    max-width: 40%;
+    max-width: 50%;
     img{
       width: 100%;
     }
@@ -251,10 +252,16 @@ body{
     font-family: Cambria, sans-serif;
     font-size: 15px;
     color: $darkFont;
+    position: relative;
+    .art-logo{
+      position: absolute;
+      top: -77px;
+      right: 0;
+    }
     h4{
-      font-size: 45px;
+      font-size: 40px;
       font-weight: 900;
-      margin: 16px 0;
+      margin: 8px 0 16px;
       line-height: 38px;
     }
     h5{
@@ -267,4 +274,13 @@ body{
       font-family: Gobold,sans-serif;
     }
   }
+}
+.about-button{
+  background-color: transparent;
+  border: 2px solid #6b5b4b;
+  color: #6b5b4b;
+  font-family: Gobold, sans-serif;
+  font-size: 12px;
+  padding: 4px 24px;
+  margin: 16px 0;
 }
