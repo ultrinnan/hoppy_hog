@@ -182,7 +182,8 @@ body{
 }
 
 .facts-screen{
-  background: $factsBgColor;
+  background: $factsBgColor url("../images/vawes.png") 0 100% repeat-x;
+  padding-bottom: 64px;
 
   .wrapper{
     padding-top: 180px;
@@ -200,10 +201,13 @@ body{
 }
 .fact-img{
   position: relative;
+  margin: 0 auto;
+  width: 190px;
+
   img{
   position: absolute;
-  bottom: -14px;
-  left: 80px;
+  bottom: 8px;
+  left: 90px;
 }
 }
 
