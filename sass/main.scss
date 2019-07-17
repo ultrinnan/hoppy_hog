@@ -234,7 +234,7 @@ body{
 
 .articles-screen{
   background-color: $articlesBgColor;
-  padding: 88px 0;
+  padding: 88px 0 48px;
 }
 .article-slider{
   max-width: 955px;
@@ -242,13 +242,13 @@ body{
   flex-direction: row;
   justify-content: space-around;
   .article-img{
-    max-width: 50%;
+    max-width: 48%;
     img{
       width: 100%;
     }
   }
   .article-content{
-    max-width: 40%;
+    max-width: 48%;
     font-family: Cambria, sans-serif;
     font-size: 15px;
     color: $darkFont;
@@ -275,6 +275,9 @@ body{
     }
   }
 }
+.article-header{
+  border-bottom: 2px solid #6e4e35;
+}
 .about-button{
   background-color: transparent;
   border: 2px solid #6b5b4b;
@@ -283,4 +286,19 @@ body{
   font-size: 12px;
   padding: 4px 24px;
   margin: 16px 0;
+}
+.article-txt{
+  margin-top: 16px;
+}
+
+.main-slider-screen{
+  background: linear-gradient(to bottom, $articlesBgColor 0%, $articlesBgColor 50%, transparent  50%, transparent 100%); ;
+}
+.main-slider{
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 48px 0;
+  img{
+    width: 100%;
+  }
 }
