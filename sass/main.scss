@@ -198,3 +198,32 @@ body{
     max-width: 30%;
   }
 }
+.fact-img{
+  position: relative;
+  img{
+  position: absolute;
+  bottom: -14px;
+  left: 80px;
+}
+}
+
+.fact-numeric{
+  font-family: 'Gobold',sans-serif;
+  font-size: 95px;
+  font-weight: 100;
+  letter-spacing: -6px;
+  color: $darkFont;
+  line-height: 95px;
+  sup{
+    font-size: 74px;
+    top: -29px;
+    left: 4px;
+  }
+}
+.fact-numeric-txt{
+  display: block;
+  font-family: 'Gobold',sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  color: $darkFont;
+}
