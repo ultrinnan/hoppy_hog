@@ -413,3 +413,33 @@ body {
   font-size: 32px;
   font-weight: 100;
   color: #1f1e22; }
+
+.articles-screen {
+  background-color: #d3bda3; }
+
+.article-slider {
+  max-width: 955px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .article-slider .article-img {
+    max-width: 40%; }
+    .article-slider .article-img img {
+      width: 100%; }
+  .article-slider .article-content {
+    max-width: 40%;
+    font-family: Cambria, sans-serif;
+    font-size: 15px;
+    color: #1f1e22; }
+    .article-slider .article-content h4 {
+      font-size: 45px;
+      font-weight: 900;
+      margin: 16px 0;
+      line-height: 38px; }
+    .article-slider .article-content h5 {
+      font-size: 17px;
+      margin: 0;
+      font-family: Gobold,sans-serif; }
+    .article-slider .article-content h7 {
+      font-size: 12px;
+      font-family: Gobold,sans-serif; }

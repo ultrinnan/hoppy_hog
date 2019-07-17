@@ -231,3 +231,40 @@ body{
   font-weight: 100;
   color: $darkFont;
 }
+
+.articles-screen{
+  background-color: $articlesBgColor;
+}
+.article-slider{
+  max-width: 955px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .article-img{
+    max-width: 40%;
+    img{
+      width: 100%;
+    }
+  }
+  .article-content{
+    max-width: 40%;
+    font-family: Cambria, sans-serif;
+    font-size: 15px;
+    color: $darkFont;
+    h4{
+      font-size: 45px;
+      font-weight: 900;
+      margin: 16px 0;
+      line-height: 38px;
+    }
+    h5{
+      font-size: 17px;
+      margin: 0;
+      font-family: Gobold,sans-serif;
+    }
+    h7{
+      font-size: 12px;
+      font-family: Gobold,sans-serif;
+    }
+  }
+}
