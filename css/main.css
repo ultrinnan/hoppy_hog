@@ -531,3 +531,12 @@ body {
   padding: 32px 0 0; }
   .main-video iframe {
     width: 100%; }
+
+.gallery-screen {
+  background: linear-gradient(to bottom, #6b5b4b 0%, #6b5b4b 15%, #1f1e22 15%, #1f1e22 100%); }
+
+.gallery {
+  column-count: 4;
+  column-gap: 4px; }
+  .gallery img {
+    width: 100%; }
