@@ -339,11 +339,32 @@ body{
 
 .about-company-screen{
   background-color: $factsBgColor;
+  padding: 32px 0 64px;
+}
+.about-company{
+  h4{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    color: $aboutFontColor;
+  }
+  p{
+    margin: 0;
+    max-width: 48%;
+    text-align: justify;
+  }
+}
+.about-company-txt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .main-video{
   max-width: 820px;
   margin: 0 auto;
-  padding: 32px;
+  padding: 32px 0 0;
   iframe{
     width: 100%;
   }
