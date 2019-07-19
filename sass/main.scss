@@ -401,3 +401,46 @@ body{
     }
   }
 }
+.principle-screen{
+  background: #1f1e22 url("../images/witch-2.png") 50% 100% no-repeat;
+  background-size: contain;
+  padding-bottom: 250px;
+}
+.principles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  p{
+    max-width: 49%;
+    text-align: justify;
+  }
+}
+.main-principle{
+  font-family: 'Besom', sans-serif;
+  font-size: 48px;
+  text-transform: capitalize;
+  max-width: 400px;
+  text-align: right;
+  .light{
+    font-size: 46px;
+    margin: 0;
+  }
+  .lighter{
+    font-size: 31px;
+    color: $articlesBgColor;
+    margin: 0;
+  }
+}
+.main-principle-bg{
+
+  background: url(../images/txt-bg.png) 100% 99% no-repeat;
+  background-size: contain;
+  //width: 133%;
+  //padding: 32px;
+}
+
+
+.form-screen{
+  height: 400px;
+  background: #000;
+}

@@ -227,6 +227,11 @@ table {
   font-style: normal;
   src: url("../fonts/gobold/10091.otf") format("opentype"); }
 
+@font-face {
+  font-family: "Besom";
+  font-style: normal;
+  src: url("../fonts/besom/Besom.ttf") format("truetype"); }
+
 body {
   background: #00181f url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
   background-size: auto;
@@ -559,3 +564,38 @@ body {
       background-size: cover;
       position: absolute;
       left: -18px; }
+
+.principle-screen {
+  background: #1f1e22 url("../images/witch-2.png") 50% 100% no-repeat;
+  background-size: contain;
+  padding-bottom: 250px; }
+
+.principles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .principles p {
+    max-width: 49%;
+    text-align: justify; }
+
+.main-principle {
+  font-family: 'Besom', sans-serif;
+  font-size: 48px;
+  text-transform: capitalize;
+  max-width: 400px;
+  text-align: right; }
+  .main-principle .light {
+    font-size: 46px;
+    margin: 0; }
+  .main-principle .lighter {
+    font-size: 31px;
+    color: #d3bda3;
+    margin: 0; }
+
+.main-principle-bg {
+  background: url(../images/txt-bg.png) 100% 99% no-repeat;
+  background-size: contain; }
+
+.form-screen {
+  height: 400px;
+  background: #000; }
