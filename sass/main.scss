@@ -389,8 +389,15 @@ body{
   }
   a{
     color: $articlesBgColor;
+    position: relative;
     &:before{
-
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: url("../images/instagram-gallery.png") 50% 50% no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: -18px;
     }
   }
 }

@@ -549,4 +549,13 @@ body {
   .insta-link span {
     color: #6d4e34; }
   .insta-link a {
-    color: #d3bda3; }
+    color: #d3bda3;
+    position: relative; }
+    .insta-link a:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: url("../images/instagram-gallery.png") 50% 50% no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: -18px; }
