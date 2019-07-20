@@ -255,9 +255,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  width: fit-content;
-  float: right; }
+  align-items: flex-end; }
 
 .social-nav {
   display: flex;
