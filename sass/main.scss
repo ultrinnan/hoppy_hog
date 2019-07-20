@@ -27,6 +27,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  width: fit-content;
+  float: right;
 }
 .social-nav{
   display: flex;
@@ -109,8 +111,6 @@ body{
       display: block;
       line-height: 38px;
     }
-
-
   }
 
 .slogan-small {
@@ -129,8 +129,6 @@ body{
   bottom: 0;
   font-size: 16px;
 }
-
-
 .sorts-screen{
   //margin: 64px 0;
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
@@ -442,6 +440,37 @@ body{
 }
 
 .form-screen{
-  height: 400px;
   background: #000;
+  .form-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .credentials{
+    max-width: 30%;
+    .form-logo{
+      text-align: center;
+    }
+  }
+  a{
+    color:#fff;
+    text-decoration: none;
+    &:active{
+      color: #fff;
+    }
+    &:focus{
+      color:#fff;
+    }
+    &:visited{
+      color:#fff;
+    }
+  }
+}
+.phone{
+  font-size: 25px;
+  font-weight: 900;
+}
+.email{
+  font-size: 16px;
 }

@@ -255,7 +255,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; }
+  align-items: flex-end;
+  width: fit-content;
+  float: right; }
 
 .social-nav {
   display: flex;
@@ -601,5 +603,28 @@ body {
   background-size: contain; }
 
 .form-screen {
-  height: 400px;
   background: #000; }
+  .form-screen .form-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .form-screen .credentials {
+    max-width: 30%; }
+    .form-screen .credentials .form-logo {
+      text-align: center; }
+  .form-screen a {
+    color: #fff;
+    text-decoration: none; }
+    .form-screen a:active {
+      color: #fff; }
+    .form-screen a:focus {
+      color: #fff; }
+    .form-screen a:visited {
+      color: #fff; }
+
+.phone {
+  font-size: 25px;
+  font-weight: 900; }
+
+.email {
+  font-size: 16px; }
