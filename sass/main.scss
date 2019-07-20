@@ -402,9 +402,14 @@ body{
   }
 }
 .principle-screen{
-  background: #1f1e22 url("../images/witch-2.png") 50% 100% no-repeat;
-  background-size: contain;
-  padding-bottom: 250px;
+  background-image: linear-gradient(to bottom, #1f1e22 0%, #1f1e22 calc(100% - 75px), #000 calc(100% - 75px), #000 100%);
+  .witch-screen{
+    width: 100%;
+    height: 100%;
+    background:  url("../images/witch-2.png") 50% 100% no-repeat;
+    background-size: contain;
+    padding-bottom: 250px;
+  }
 }
 .principles{
   display: flex;
