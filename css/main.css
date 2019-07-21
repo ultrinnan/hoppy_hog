@@ -248,8 +248,8 @@ body {
 
 .fixed-header {
   position: fixed;
-  width: 100%;
-  top: 0; }
+  top: 0;
+  right: 0; }
 
 .top-navigation {
   display: flex;
@@ -262,8 +262,8 @@ body {
   justify-content: end; }
   .social-nav a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-size: cover; }
   .social-nav .fb {
     background: url("../images/facebook.png") 50% 50% no-repeat; }

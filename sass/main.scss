@@ -7,6 +7,8 @@ body{
   font-family: Cambria, sans-serif;
   font-size: 16px;
   color: #fff;
+  //display: flex;
+  //justify-content: flex-end;
 }
 .wrapper{
   width: 100%;
@@ -19,8 +21,9 @@ body{
 
 .fixed-header{
   position: fixed;
-  width: 100%;
+  //width: 88px;
   top:0;
+  right:0;
 }
 .top-navigation{
   display: flex;
@@ -35,8 +38,8 @@ body{
   justify-content: end;
   a{
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-size: cover;
   }
   .fb{
