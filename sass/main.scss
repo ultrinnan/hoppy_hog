@@ -444,16 +444,25 @@ body{
 
 .form-screen{
   background: #000;
+  form{
+    max-width: 45%;
+    padding-left: 32px;
+  }
   .form-box{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    span{
+      color: #6c5c4c;
+    }
   }
 
   .credentials{
     max-width: 30%;
     .form-logo{
       text-align: center;
+      margin-bottom: 32px;
     }
   }
   a{
@@ -469,11 +478,37 @@ body{
       color:#fff;
     }
   }
+  label{
+    display: block;
+    margin: 20px 0;
+
+  }
+  textarea{
+    height: 260px;
+  }
+  input{
+    height: 48px;
+  }
+  input,textarea{
+    padding: 8px;
+    width: 375px;
+    background: $galleryBgColor;
+    box-sizing: border-box;
+    border: none;
+  }
+  .about-button{
+    width: 375px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
 }
 .phone{
   font-size: 25px;
   font-weight: 900;
+  margin-top: 0;
 }
 .email{
   font-size: 16px;
+  margin-bottom: 0;
 }
