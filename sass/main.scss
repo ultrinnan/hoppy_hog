@@ -516,6 +516,21 @@ body{
   display: flex;
   flex-direction: row;
   padding: 10px;
+  margin-bottom: 32px;
+  h4{
+    font-family: 'Gobold', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: $articlesBgColor;
+  }
+  a{
+    font-size: 15px;
+    font-family: Cambria, sans-serif;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 16px;
+  }
 }
 .footer-col-beer{
   flex:3;
@@ -524,16 +539,27 @@ body{
 }
 .footer-col-beer-box{
   columns: 3;
-  a{
-    display: block;
-  }
 }
 
 .footer-col-about, .footer-col-contacts{
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+.footer-credentials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6c5c4c;
+  font-size: 12px;
+  margin: 32px 0;
+  span{
+    margin: 8px 0 0;
+  }
   a{
-    display: block;
+    text-decoration: none;
+    color: #6c5c4c;
+    font-size: 12px;
   }
 }
