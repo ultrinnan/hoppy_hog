@@ -602,14 +602,21 @@ body {
 
 .form-screen {
   background: #000; }
+  .form-screen form {
+    max-width: 45%;
+    padding-left: 32px; }
   .form-screen .form-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-around;
+    align-items: center; }
+    .form-screen .form-box span {
+      color: #6c5c4c; }
   .form-screen .credentials {
     max-width: 30%; }
     .form-screen .credentials .form-logo {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 32px; }
   .form-screen a {
     color: #fff;
     text-decoration: none; }
@@ -619,10 +626,52 @@ body {
       color: #fff; }
     .form-screen a:visited {
       color: #fff; }
+  .form-screen label {
+    display: block;
+    margin: 20px 0; }
+  .form-screen textarea {
+    height: 260px; }
+  .form-screen input {
+    height: 48px; }
+  .form-screen input, .form-screen textarea {
+    padding: 8px;
+    width: 375px;
+    background: #1f1e22;
+    box-sizing: border-box;
+    border: none; }
+  .form-screen .about-button {
+    width: 375px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
 
 .phone {
   font-size: 25px;
-  font-weight: 900; }
+  font-weight: 900;
+  margin-top: 0; }
 
 .email {
-  font-size: 16px; }
+  font-size: 16px;
+  margin-bottom: 0; }
+
+.footer-box {
+  display: flex;
+  flex-direction: row;
+  padding: 10px; }
+
+.footer-col-beer {
+  flex: 3;
+  display: flex;
+  flex-direction: column; }
+
+.footer-col-beer-box {
+  columns: 3; }
+  .footer-col-beer-box a {
+    display: block; }
+
+.footer-col-about, .footer-col-contacts {
+  flex: 1;
+  display: flex;
+  flex-direction: column; }
+  .footer-col-about a, .footer-col-contacts a {
+    display: block; }
