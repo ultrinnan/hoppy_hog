@@ -726,6 +726,8 @@ body {
     .fact-img img {
       right: 8px;
       left: auto; }
+  .articles-screen {
+    padding: 88px 0 0; }
   .article-slider {
     flex-direction: column; }
     .article-slider .article-img, .article-slider .article-content {
@@ -755,6 +757,9 @@ body {
     .about-company-txt p {
       max-width: 100%;
       text-align: center; }
+  .about-button {
+    margin: 32px auto 0;
+    display: block; }
   .gallery {
     column-count: auto; }
   .principles {

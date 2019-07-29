@@ -575,9 +575,6 @@ body{
       margin: 0 auto;
     }
   }
-  .sorts-screen{
-
-  }
   .sorts-screen:after{
     width: 100%;
     margin-left: -50%;
@@ -601,6 +598,9 @@ body{
       right: 8px;
       left: auto;
     }
+  }
+  .articles-screen{
+    padding: 88px 0 0;
   }
   .article-slider{
     flex-direction: column;
@@ -640,6 +640,10 @@ body{
       max-width: 100%;
       text-align: center;
     }
+  }
+  .about-button{
+    margin: 32px auto 0;
+    display: block;
   }
   .gallery{
     column-count: auto;
