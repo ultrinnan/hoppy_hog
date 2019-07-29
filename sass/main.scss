@@ -563,4 +563,48 @@ body{
   .description{
     columns: auto;
   }
+  .sorts{
+    columns: auto;
+    .sort-box span{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .sorts-screen:after{
+    width: 700px;
+    margin-left: -350px;
+    background-size: contain;
+  }
+  .facts-screen {
+    .wrapper{
+      flex-direction: column;
+    }
+    .fact{
+      max-width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  .fact-img{
+    width: 290px;
+    margin:unset;
+    img{
+      right: 8px;
+      left: auto;
+    }
+  }
+  .article-slider{
+    flex-direction: column;
+    .article-img, .article-content{
+      max-width: 100%;
+    }
+    .article-content .art-logo {
+      position: absolute;
+      top: -70px;
+      right: -42px;
+      transform: rotate(28deg);
+    }
+  }
+
 }

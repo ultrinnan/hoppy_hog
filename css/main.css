@@ -698,4 +698,35 @@ body {
 
 @media only screen and (max-width: 500px) {
   .description {
-    columns: auto; } }
+    columns: auto; }
+  .sorts {
+    columns: auto; }
+    .sorts .sort-box span {
+      display: block;
+      margin: 0 auto; }
+  .sorts-screen:after {
+    width: 700px;
+    margin-left: -350px;
+    background-size: contain; }
+  .facts-screen .wrapper {
+    flex-direction: column; }
+  .facts-screen .fact {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse; }
+  .fact-img {
+    width: 290px;
+    margin: unset; }
+    .fact-img img {
+      right: 8px;
+      left: auto; }
+  .article-slider {
+    flex-direction: column; }
+    .article-slider .article-img, .article-slider .article-content {
+      max-width: 100%; }
+    .article-slider .article-content .art-logo {
+      position: absolute;
+      top: -70px;
+      right: -42px;
+      transform: rotate(28deg); } }
