@@ -351,15 +351,11 @@ body {
     margin-bottom: -178px; }
 
 .description {
-  display: flex;
-  flex-direction: row;
   color: #fff;
-  justify-content: space-between;
   font-size: 16px;
-  margin: 32px 0 64px 0; }
-  .description p {
-    max-width: 48%;
-    text-align: justify; }
+  margin: 32px 0 64px 0;
+  text-align: justify;
+  columns: 2; }
 
 .sorts {
   columns: 3;
@@ -699,3 +695,7 @@ body {
     text-decoration: none;
     color: #6c5c4c;
     font-size: 12px; }
+
+@media only screen and (max-width: 500px) {
+  .description {
+    columns: auto; } }
