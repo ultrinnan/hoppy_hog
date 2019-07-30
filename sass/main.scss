@@ -564,6 +564,12 @@ body{
 }
 
 @media only screen and (max-width:500px){
+  .fixed-header .wrapper{
+    padding: 0;
+    .main-nav__item a{
+      margin: 16px 5px;
+    }
+  }
   .description{
     columns: auto;
   }
@@ -681,6 +687,7 @@ body{
     .credentials{
       max-width: 100%;
       text-align: center;
+      margin-top: 32px;
     }
     .about-button{
       width: 100%;
