@@ -21,7 +21,7 @@ body{
 
 .fixed-header{
   position: fixed;
-  //width: 88px;
+  z-index: 1;
   top:0;
   right:0;
 }
@@ -116,9 +116,8 @@ body{
   font-size: 16px;
 
 }
-.slogan::after {
+.go {
   position: absolute;
-  content: '⌄';
   width: 16px;
   height: 8px;
   left: 50%;
@@ -126,6 +125,7 @@ body{
   color: #fff;
   bottom: 0;
   font-size: 16px;
+  text-decoration: none;
 }
 .sorts-screen{
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
