@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hoppy Hog Family Brewery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -214,40 +215,64 @@
             <div class="wrapper">
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img src="images/1.jpg" alt="">
+                        <a href="images/1.jpg" data-fancybox="images">
+                            <img src="images/1.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/2.jpg" alt="">
+                        <a href="images/2.jpg" data-fancybox="images">
+                            <img src="images/2.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/3.jpg" alt="">
+                        <a href="images/3.jpg" data-fancybox="images">
+                            <img src="images/3.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/4.jpg" alt="">
+                        <a href="images/4.jpg" data-fancybox="images">
+                            <img src="images/4.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/5.jpg" alt="">
+                        <a href="images/5.jpg" data-fancybox="images">
+                            <img src="images/5.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/6.jpg" alt="">
+                        <a href="images/6.jpg" data-fancybox="images">
+                            <img src="images/6.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/7.jpg" alt="">
+                        <a href="images/7.jpg" data-fancybox="images">
+                            <img src="images/7.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/8.jpg" alt="">
+                        <a href="images/8.jpg" data-fancybox="images">
+                            <img src="images/8.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/9.jpg" alt="">
+                        <a href="images/9.jpg" data-fancybox="images">
+                            <img src="images/9.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/10.jpg" alt="">
+                        <a href="images/10.jpg" data-fancybox="images">
+                            <img src="images/10.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/11.jpg" alt="">
+                        <a href="images/11.jpg" data-fancybox="images">
+                            <img src="images/11.jpg" alt="">
+                        </a>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/12.jpg" alt="">
+                        <a href="images/12.jpg" data-fancybox="images">
+                            <img src="images/12.jpg" alt="">
+                        </a>
                     </div>
                     <div class="insta-link">
                         <span>больше фотографий</span>
@@ -366,5 +391,21 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <script>
+        $('[data-fancybox="images"]').fancybox({
+            buttons : [
+                // 'slideShow',
+                // 'share',
+                // 'zoom',
+                // 'fullScreen',
+                'close'
+            ],
+            // thumbs : {
+            //   autoStart : true
+            // }
+        });
+    </script>
 </body>
 </html>
