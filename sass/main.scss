@@ -30,8 +30,6 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  //width: fit-content;
-  //float: right;
 }
 .social-nav{
   display: flex;
@@ -76,15 +74,11 @@ body{
 
 //front page
 .front-screen{
-  //background: url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
-  //background-size: cover;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   overflow: hidden;
 }
-
-  //height: 738px;
-  //position: relative;
   .logo{
     display: block;
     position: absolute;
@@ -134,7 +128,6 @@ body{
   font-size: 16px;
 }
 .sorts-screen{
-  //margin: 64px 0;
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
   background-size: cover;
   position: relative;
@@ -166,6 +159,7 @@ body{
   .sort-box{
     display: inline-block;
     margin-bottom: 24px;
+    cursor: pointer;
     img{
       max-width: max-content;
     }
