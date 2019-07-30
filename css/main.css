@@ -259,7 +259,8 @@ body {
 
 .social-nav {
   display: flex;
-  justify-content: end; }
+  justify-content: end;
+  margin-top: 16px; }
   .social-nav a {
     display: block;
     width: 30px;
@@ -276,14 +277,15 @@ body {
   display: block; }
   .main-nav ul {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 0; }
     .main-nav ul .main-nav__item a {
       display: block;
       width: 8px;
       height: 8px;
       background-color: #fff;
       border-radius: 50%;
-      margin: 24px 16px; }
+      margin: 16px 16px; }
 
 .front-screen {
   height: 100vh;
