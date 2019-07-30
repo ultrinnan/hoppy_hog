@@ -489,6 +489,10 @@ body{
     background: $galleryBgColor;
     box-sizing: border-box;
     border: none;
+    color: $articlesBgColor;
+    &::placeholder{
+      color: $articlesBgColor;
+    }
   }
   .about-button{
     width: 375px;

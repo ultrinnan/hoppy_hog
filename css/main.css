@@ -642,7 +642,10 @@ body {
     width: 375px;
     background: #1f1e22;
     box-sizing: border-box;
-    border: none; }
+    border: none;
+    color: #d3bda3; }
+    .form-screen input::placeholder, .form-screen textarea::placeholder {
+      color: #d3bda3; }
   .form-screen .about-button {
     width: 375px;
     font-size: 15px;
