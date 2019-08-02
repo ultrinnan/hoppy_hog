@@ -374,7 +374,7 @@ body{
 .gallery{
   column-count: 4;
   column-gap: 4px;
-  img{
+  img, video{
     width: 100%;
   }
 }
