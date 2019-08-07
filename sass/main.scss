@@ -8,6 +8,7 @@ body{
   position: relative;
   overflow: hidden;
   &::before {
+    //--angle: 0deg;
     content: "";
     position: absolute;
     width: 200vw;
@@ -18,7 +19,7 @@ body{
     background: url(../images/bg-hog.png) 50% calc(50vh - 150px) no-repeat;
     background-size: auto;
     //-webkit-transform: rotate(2deg);
-    transform: rotate(2deg);
+    transform: rotate(0deg);
   }
 }
 .wrapper{

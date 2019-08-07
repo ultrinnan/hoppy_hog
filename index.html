@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="beer-hog">
+    <div class="beer-hog" id="hog">
         <header class="fixed-header">
             <div class="wrapper">
                 <div class="top-navigation">
@@ -426,6 +426,15 @@
             //   autoStart : true
             // }
         });
+    </script>
+    <script>
+        let hog = document.getElementById('hog');
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener('deviceorientation', rotateBeer);
+        }
+        function rotateBeer(evt) {
+            hog.style.setProperty('transform', 'rotate('+-evt.gamma+'deg)')
+        }
     </script>
     <script src="js/script.js"></script>
     <script>
