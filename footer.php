@@ -4,6 +4,11 @@
 </main>
 <footer>
     <div class="wrapper">
+        <?php wp_nav_menu([
+		    'theme_location' => 'footer',
+		    'container' => false,
+		    'menu_class' => 'footer-box'
+	    ]);?>
         <div class="footer-box">
             <div class="footer-col-beer">
                 <h4>Пиво</h4>
