@@ -1,4 +1,8 @@
 <?php
+$options = get_option('general_options');
+
+$phone = isset($options['phone']) ? $options['phone'] : '';
+$email = isset($options['email']) ? $options['email'] : '';
 ?>
 
 </main>
@@ -48,9 +52,10 @@
             </div>
         </div>
         <div class="footer-credentials">
-            <a href="mailto:son.of.brewer@hoppyhog.com">son.of.brewer@hoppyhog.com</a>
-            <a href="tel:+38 095 602 4356">+38 095 602 4356</a>
-            <span>HoppyHog © Copyright 2019</span>
+            <a href="mailto:<?=$email;?>"><?=$email;?></a>
+            <a href="tel:<?=$phone;?>"><?=$phone;?></a>
+            <span>HoppyHog © <?=date('Y')?></span>
+            <span>created by <a href="https://fedirko.pro">FEDIRKO.PRO</a></span>
         </div>
     </div>
 </footer>
