@@ -62,40 +62,14 @@
     <section>
         <div class="facts-screen">
             <div class="wrapper">
-                <div class="fact first-fact">
-                    <p>
-                        Мы всё время экспериментируем - добавляем в процессе варки солод и хммль по своему усмотрению, любит заимствовать опыт других пивоваров, находить интересные и необычные вкусы. Иногда варим пиво в бельгийском стиле или делаем напиток с травами.
-                    </p>
-                    <div class="fact-img">
-                        <span class="fact-numeric ben_years">25</span><sup class="fact-sup">т</sup>
-                        <span class="fact-numeric-txt">в месяц</span>
-                        <img src="/wp-content/themes/hoppy_hog/images/brewery-fact.png" alt="brewery">
-                    </div>
-
-                </div>
-                <div class="fact second-fact">
-                    <p>
-                        Всё сырьё для производства - в том числе солод и хмель, закупаются нами за рубежом. Так же мы продаём пиво только в бутылках, поскольку считаем, что только так можно донести вкус и аромат.  Ууникальным наше пиво делает технология созревания в бутылках.
-                    </p>
-                    <div class="fact-img">
-                        <span class="fact-numeric ben_time">20</span>
-                        <span class="fact-numeric-txt">паллет</span>
-                        <img src="/wp-content/themes/hoppy_hog/images/bottles-fact.png" alt="bottles">
-                    </div>
-                </div>
-                <div class="fact third-fact">
-                    <p>
-                        Мы варим очень узнаваемое пиво, поэтому у него есть свои почитатели которые покупают пиво только нашего производства. Мы предпочитает варить необычные и вкусные эли, и редко экспериментируем с лагерными сортами.
-                    </p>
-                    <div class="fact-img">
-                        <span class="fact-numeric ben_parts">17</span>
-                        <span class="fact-numeric-txt">сортов</span>
-                        <img src="/wp-content/themes/hoppy_hog/images/beer-fact.png" alt="beer">
-                    </div>
-                </div>
+	            <?php
+	            if ( is_active_sidebar( 'beer-facts' ) ) {
+		            dynamic_sidebar( 'beer-facts' );
+	            }
+	            ?>
             </div>
-
         </div>
+
         <div class="articles-screen">
             <div class="wrapper">
                 <article class="article-slider">

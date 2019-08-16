@@ -33,12 +33,25 @@ function f_register_menus() {
 }
 add_action( 'after_setup_theme', 'f_register_menus' );
 
+//remove titles for all widgets
+add_filter('widget_title','my_widget_title');
+function my_widget_title($t)
+{
+	return null;
+}
+
 // create widget for Contacts page
 register_sidebar(array(
 	'name' => 'Contacts page form',
 	'id' => 'form-contacts',
 	'before_widget' => '<div class="form-content">',
 	'after_widget' => '</div>',
-	'before_title' => '<h2 class="h2 title"><span class="contact_icon">',
-	'after_title' => '</span></h2>',
+));
+
+// create widgets for facts
+register_sidebar(array(
+	'name' => 'Beer facts',
+	'id' => 'beer-facts',
+	'before_widget' => '',
+	'after_widget' => '',
 ));
