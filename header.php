@@ -1,5 +1,9 @@
 <?php
+$options = get_option('social_options');
 
+$facebook = isset($options['facebook']) ? $options['facebook'] : '';
+$instagram = isset($options['instagram']) ? $options['instagram'] : '';
+$youtube = isset($options['youtube']) ? $options['youtube'] : '';
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
@@ -20,19 +24,10 @@
         <div class="wrapper">
             <div class="top-navigation">
                 <nav class="social-nav">
-                    <a class="social-nav__item fb" href="#"></a>
-                    <a class="social-nav__item ig" href="#"></a>
-                    <a class="social-nav__item yt" href="#"></a>
+                    <a class="social-nav__item fb" href="<?=$facebook?>"></a>
+                    <a class="social-nav__item ig" href="<?=$instagram?>"></a>
+                    <a class="social-nav__item yt" href="<?=$youtube?>"></a>
                 </nav>
-                <!--                <nav class="main-nav" id="dot-nav">-->
-                <!--                    <ul>-->
-                <!--                        <li class="main-nav__item"><a href="#"></a></li>-->
-                <!--                        <li class="main-nav__item"><a href="#sorts"></a></li>-->
-                <!--                        <li class="main-nav__item"><a href="#articles"></a></li>-->
-                <!--                        <li class="main-nav__item"><a href="#gallery"></a></li>-->
-                <!--                        <li class="main-nav__item"><a href="#form"></a></li>-->
-                <!--                    </ul>-->
-                <!--                </nav>-->
                 <nav id="dot-nav"></nav>
             </div>
         </div>

@@ -19,11 +19,6 @@ $result = get_option('social_options');
     <form method="POST">
 
         <div class="form-group">
-            <label for="youtube">Youtube link:</label>
-            <input type="url" class="form-control" id="youtube" name="youtube" value="<?=$result['youtube']?>">
-        </div>
-
-        <div class="form-group">
             <label for="facebook">Facebook link:</label>
             <input type="url" class="form-control" id="facebook" name="facebook" value="<?=$result['facebook']?>">
         </div>
@@ -34,8 +29,8 @@ $result = get_option('social_options');
         </div>
 
         <div class="form-group">
-            <label for="vimeo">Vimeo link:</label>
-            <input type="url" class="form-control" id="vimeo" name="vimeo" value="<?=$result['vimeo']?>">
+            <label for="youtube">Youtube link:</label>
+            <input type="url" class="form-control" id="youtube" name="youtube" value="<?=$result['youtube']?>">
         </div>
 
         <p class="submit">
