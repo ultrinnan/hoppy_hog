@@ -33,66 +33,28 @@
     <section class="sorts-screen">
         <div class="wrapper">
             <div class="description" id="description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                <?php
+                $introText = get_page_by_path('intro-text');
+                echo get_post_field('post_content', $introText->ID);
+                ?>
             </div>
             <div class="sorts" id="sorts">
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Sweet-Dreams.png" alt="Sweet-Dreams-Sort">
-                    <span>британський молочний стаут</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Amber-Ale.png" alt="">
-                    <span>американський янтарний ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Milkshake-Session.png" alt="">
-                    <span>індійський світлий ель в стилі "Мілкшейк"</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Panama.png" alt="">
-                    <span>світлий ячмінний ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Salty-Caramel.png" alt="">
-                    <span>браун ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/IPA.png" alt="">
-                    <span>традиційний індійський світлий ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Belgian.png" alt="">
-                    <span>бельгійський пшеничний світлий ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Gruit.png" alt="">
-                    <span>средньовічний ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Red-Wedding.png" alt="">
-                    <span>червоний індійський світлий ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/GingeriAle.png" alt="">
-                    <span>імбирний ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Neipa.png" alt="">
-                    <span>індійський світлий ель в стилі Нової Англії</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Alt-Bier.png" alt="">
-                    <span>дюсельдорфський альтбір</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/Gemballe.png" alt="">
-                    <span>бельгійський потрійний ель</span>
-                </div>
-                <div class="sort-box">
-                    <img src="/wp-content/themes/hoppy_hog/images/УПА.png" alt="">
-                    <span>український світлий ель</span>
-                </div>
+	            <?php
+	            $beer_args = array( 'category_name' => 'beer');
+	            //wp query
+	            $beer_query = new WP_Query($beer_args);
+	            while ( $beer_query->have_posts() ) :
+		            $beer_query->the_post();
+		            $beer_url = get_permalink();
+		            $beer_name = get_the_title();
+                    $thumb = get_the_post_thumbnail_url()?get_the_post_thumbnail_url():'';
+                    ?>
+                    <a href="<?=$beer_url?>" class="sort-box">
+                        <img src="<?=$thumb?>" alt="<?=$beer_name?>">
+                        <span><?=$beer_name?></span>
+                    </a>
+                    <?php
+	            endwhile;?>
             </div>
         </div>
     </section>
