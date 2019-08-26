@@ -1,4 +1,15 @@
-<?php get_header(); ?>
+<?php get_header();
+$gen_options = get_option('general_options');
+
+$phone = isset($gen_options['phone']) ? $gen_options['phone'] : '';
+$email = isset($gen_options['email']) ? $gen_options['email'] : '';
+
+$options = get_option('social_options');
+
+$facebook = isset($options['facebook']) ? $options['facebook'] : '';
+$instagram = isset($options['instagram']) ? $options['instagram'] : '';
+$youtube = isset($options['youtube']) ? $options['youtube'] : '';
+?>
 
 <div class="beer-hog">
         <div class="beer-hog-before" id="hog">
@@ -73,7 +84,6 @@
         <div class="articles-screen">
             <div class="wrapper">
                 <article class="article-slider">
-
                     <div class="article-img">
                         <img src="/wp-content/themes/hoppy_hog/images/article-img.jpg" alt="article image">
                     </div>
@@ -99,10 +109,14 @@
         <div class="main-slider-screen">
             <div class="wrapper">
                 <div class="main-slider">
-                    <img src="/wp-content/themes/hoppy_hog/images/main-slider.jpg" alt="main slider">
+                    <?php
+                        echo do_shortcode('[smartslider3 slider=2]');
+                    ?>
                 </div>
             </div>
         </div>
+    </section>
+    <section>
         <div class="trigger-screen">
             <div class="wrapper">
                 <div class="trigger">
@@ -124,6 +138,19 @@
     </section>
     <section class="about-company-screen">
         <div class="wrapper">
+            <?php
+            // query for the about page
+            $aboutPage = new WP_Query('pagename=about-company');
+            // "loop" through query (even though it's just one page)
+            while ($aboutPage->have_posts()) : $aboutPage->the_post();
+                the_content();
+            endwhile;
+            // reset post data (important!)
+            wp_reset_postdata();
+            ?>
+        </div>
+
+        <div class="wrapper">
             <div class="main-video">
                 <iframe width="820" height="400" src="https://www.youtube.com/embed/xzIt3Q7uaAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -139,6 +166,11 @@
     </section>
     <section class="gallery-screen" id="gallery">
         <div class="wrapper">
+            <?php
+            if ( is_active_sidebar( 'gallery' ) ) {
+                dynamic_sidebar( 'gallery' );
+            }
+            ?>
             <div class="gallery">
                 <div class="gallery-item">
                     <a href="images/1.jpg" data-fancybox="images">
@@ -214,14 +246,23 @@
         <div class="witch-screen">
             <div class="wrapper">
                 <div class="principles">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                    <p> deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi </p>
+                    <?php
+                    // query for the page
+                    $principles = new WP_Query('pagename=principles');
+                    // "loop" through query (even though it's just one page)
+                    while ($principles->have_posts()) : $principles->the_post();
+                        the_content();
+                    endwhile;
+                    // reset post data (important!)
+                    wp_reset_postdata();
+                    ?>
                 </div>
                 <div class="main-principle">
-                    <p class="main-principle-bg">главный пивовар - это наша мама,</p>
-                    <p class="lighter">а мама, как вы понимаете,</p>
-                    <p class="light">варит вкусно!</p>
-                    <p class="lighter">особенно, одесская.</p>
+                    <?php
+                    if ( is_active_sidebar( 'principles' ) ) {
+                        dynamic_sidebar( 'principles' );
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -230,23 +271,11 @@
     <section class="form-screen" id="form">
         <div class="wrapper">
             <div class="form-box">
-                <form action="post">
-                    <span>Не стесняйтесь обращаться к нам по любым вопросам относительно нашей пивоварни и пива</span>
-                    <label>
-                        <input type="text" placeholder="Имя и фамилия">
-                    </label>
-                    <label>
-                        <input type="email" placeholder="Адресс электронной почты">
-                    </label>
-                    <label>
-                        <input type="text" placeholder="Тема">
-                    </label>
-                    <label>
-                        <textarea placeholder="Сообщение"></textarea>
-                    </label>
-                    <button class="about-button">отправить</button>
-
-                </form>
+                <?php
+                if ( is_active_sidebar( 'form-contacts' ) ) {
+                    dynamic_sidebar( 'form-contacts' );
+                }
+                ?>
                 <div class="credentials">
                     <div class="form-logo">
                         <img src="/wp-content/themes/hoppy_hog/images/form-logo.png" alt="hoppy hog">
@@ -256,16 +285,16 @@
                         <strong>"Хмельной Кабан"</strong>, Одесса, Украина
                     </p>
                     <p class="email">
-                        <a href = "mailto:son.of.brewer@hoppyhog.com">son.of.brewer@hoppyhog.com</a>
+                        <a href="mailto:<?=$email;?>"><?=$email;?></a>
                     </p>
                     <p class="phone">
-                        <a href="tel:+380956024356">+38 095 602 4356</a>
+                        <a href="tel:<?=$phone;?>"><?=$phone;?></a>
                     </p>
                     <div class="socials">
                         <nav class="social-nav">
-                            <a class="social-nav__item fb" href="/"></a>
-                            <a class="social-nav__item ig" href="/"></a>
-                            <a class="social-nav__item yt" href="/"></a>
+                            <a target="_blank" class="social-nav__item fb" href="<?=$facebook?>"></a>
+                            <a target="_blank" class="social-nav__item ig" href="<?=$instagram?>"></a>
+                            <a target="_blank" class="social-nav__item yt" href="<?=$youtube?>"></a>
                         </nav>
                     </div>
                 </div>

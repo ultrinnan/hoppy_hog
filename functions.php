@@ -55,3 +55,18 @@ register_sidebar(array(
 	'before_widget' => '',
 	'after_widget' => '',
 ));
+
+// create widget for gallery
+register_sidebar(array(
+	'name' => 'Gallery',
+	'id' => 'gallery',
+	'before_widget' => '',
+	'after_widget' => '',
+));
+// create widget for principles
+register_sidebar(array(
+	'name' => 'Principles',
+	'id' => 'principles',
+	'before_widget' => '',
+	'after_widget' => '',
+));

@@ -24,9 +24,9 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
         <div class="wrapper">
             <div class="top-navigation">
                 <nav class="social-nav">
-                    <a class="social-nav__item fb" href="<?=$facebook?>"></a>
-                    <a class="social-nav__item ig" href="<?=$instagram?>"></a>
-                    <a class="social-nav__item yt" href="<?=$youtube?>"></a>
+                    <a target="_blank" class="social-nav__item fb" href="<?=$facebook?>"></a>
+                    <a target="_blank" class="social-nav__item ig" href="<?=$instagram?>"></a>
+                    <a target="_blank" class="social-nav__item yt" href="<?=$youtube?>"></a>
                 </nav>
                 <nav id="dot-nav"></nav>
             </div>
