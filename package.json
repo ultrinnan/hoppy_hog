@@ -14,10 +14,10 @@
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",
+    "gulp-livereload": "^4.0.1",
     "gulp-sass": "*",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "gulp-livereload": "^4.0.1",
+    "gulp-terser": "^1.2.0",
     "jshint": "^2.10.1",
     "jshint-stylish": "^2.2.1"
   }

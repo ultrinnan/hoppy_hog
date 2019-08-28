@@ -83,25 +83,40 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
 
         <div class="articles-screen">
             <div class="wrapper">
-                <article class="article-slider">
-                    <div class="article-img">
-                        <img src="/wp-content/themes/hoppy_hog/images/article-img.jpg" alt="article image">
-                    </div>
-                    <div class="article-content">
-                        <div class="art-logo">
-                            <img src="/wp-content/themes/hoppy_hog/images/logo-black.png" alt="logo">
+	            <?php
+	            $args = array( 'category_name' => 'articles');
+	            //wp query
+	            $query = new WP_Query($args);
+	            while ( $query->have_posts() ) :
+		            $query->the_post();
+		            $url = get_permalink();
+		            $name = get_the_title();
+		            $content = get_the_content();
+		            $thumb = get_the_post_thumbnail_url()?get_the_post_thumbnail_url():'';
+		            ?>
+                <div class="article-box">
+                    <article class="article-slider" style="width: 100%; max-width: 100%">
+                        <a href="<?=$url;?>" class="article-img">
+                            <img src="<?=$thumb;?>" alt="<?=$name;?>">
+                        </a>
+                        <div class="article-content">
+                            <div class="art-logo">
+                                <img src="/wp-content/themes/hoppy_hog/images/logo-black.png" alt="logo">
+                            </div>
+                            <header class="article-header">
+                                <div class="h7">Семейная пивоварня</div>
+                                <h5>HOPPY HOG</h5>
+                                <h4><a href="<?=$url;?>"><?=$name;?></a></h4>
+                            </header>
+                            <div class="article-txt">
+				                <?=$content;?>
+                            </div>
+                            <a href="<?=$url;?>" class="about-button">читати далі</a>
                         </div>
-                        <header class="article-header">
-                            <h7>Семейная пивоварня</h7>
-                            <h5>HOPPY HOG</h5>
-                            <h4>Пиво, созданное с целью</h4>
-                        </header>
-                        <div class="article-txt">
-                            В пивоварне <strong>Hoppy Hog</strong> всегда стремятся к самым высоким стандартам. Каждый день мы бросаем вызов сами себе. Наша погоня за высококим качеством приводит нас к постоянным поискам и исследованиям. Это путешествие по изведанному и неизведанному, позволяет нам создавать каждый раз нечто инересное, что дарит радость, объединяет и вдохновляет друзей. Наше пиво создаёт общество. Захватывающие истории и приключение движат нами, и наше пиво является их частью. Частью такого мира, который наполнен желаниями и возможностями. И мы постоянно стремимся к таким ощущениям. Это те вещи, которые были когда-то сказаны в те далёкие времена, когда идея пивоварени ещё только витала в воздухе.
-                        </div>
-                        <button class="about-button">o нашем пиве</button>
-                    </div>
-                </article>
+                    </article>
+                </div>
+	            <?php
+	            endwhile;?>
             </div>
         </div>
     </section>
@@ -221,14 +236,6 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
                     <a href="images/10.jpg" data-fancybox="images">
                         <img src="/wp-content/themes/hoppy_hog/images/10.jpg" alt="">
                     </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="videos/test.mp4" data-fancybox="images">
-                        <video src="videos/test.mp4"></video>
-                    </a>
-                    <!--                        <a href="images/11.jpg" data-fancybox="images">-->
-                    <!--                            <img src="/wp-content/themes/hoppy_hog/images/11.jpg" alt="">-->
-                    <!--                        </a>-->
                 </div>
                 <div class="gallery-item">
                     <a href="images/12.jpg" data-fancybox="images">

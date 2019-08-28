@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 jQuery(document).ready(function($) {
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -20,7 +22,6 @@ jQuery(document).ready(function($) {
 // ---------------
 
     let hog = document.getElementById('hog');
-    console.log(hog);
 // if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', rotateBeer);
 // }
@@ -32,32 +33,32 @@ jQuery(document).ready(function($) {
 // --------------
 
 // бегущие цифры по скролу -------
-    var scroller = true;
+    let scroller = true;
     $(window).scroll(function () {
         if (scroller===true) {
             if( $(window).scrollTop() > 300 ) {
                 $({ n: 1 }).animate({ n: 25 }, {
                     duration: 3000,
                     step: function (a) {
-                        $(".ben_years").html(a | 0)
+                        $(".ben_years").html(a | 0);
                     }
                 });
                 $({ n: 1 }).animate({ n: 20 }, {
                     duration: 3000,
                     step: function (a) {
-                        $(".ben_time").html(a | 0)
+                        $(".ben_time").html(a | 0);
                     }
                 });
                 $({ n: 1 }).animate({ n: 17 }, {
                     duration: 3000,
                     step: function (a) {
-                        $(".ben_parts").html(a | 0)
+                        $(".ben_parts").html(a | 0);
                     }
                 });
                 $({ n: 1 }).animate({ n: 5587 }, {
                     duration: 3000,
                     step: function (a) {
-                        $(".ben_tickets").html(a | 0)
+                        $(".ben_tickets").html(a | 0);
                     }
                 });
                 scroller = false;
@@ -70,7 +71,7 @@ jQuery(document).ready(function($) {
 
 //  dot nav
     let dotNav = (elem, easing) => {
-        function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+        function scrollIt(destination, duration = 200, easing = 'linear') {
             const easings = {
                 linear(t) { return t; },
                 easeInQuad(t) { return t * t; },
@@ -155,7 +156,7 @@ jQuery(document).ready(function($) {
                 dotCreate.id = 'dot-' + i;
                 dotCreate.classList.add('dots');
                 dotCreate.href = '#';
-                dotCreate.setAttribute('data-sec', i);
+                dotCreate.setAttribute('data-sec', '"'+i+'"');
                 nav.appendChild(dotCreate);
             }
         };
@@ -172,7 +173,7 @@ jQuery(document).ready(function($) {
         const dotActive = () => {
             allVis = document.getElementsByClassName('in-viewport');
             allDots = document.getElementsByClassName('dots');
-            visNum = allVis.length;
+            let visNum = allVis.length;
             let a = visNum - 1;
             for (let i = 0; i < allSecs.length; i++) {
                 allDots[i].classList.remove('active');
@@ -198,4 +199,16 @@ jQuery(document).ready(function($) {
     };
 
     dotNav('section', 'easeInOutCubic');
+
+    $('.articles-screen .wrapper').slick({
+        // centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: true,
+        dotsClass: 'slick-dots',
+        arrows: true,
+        infinite: true,
+        speed: 1000,
+    });
 });

@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const jshint = require('gulp-jshint');
 const rename = require('gulp-rename');
 const livereload = require('gulp-livereload');
@@ -55,7 +55,7 @@ function scripts() {
     return gulp.src([paths.scripts.src + '*.js', `!${paths.scripts.src}*.min.js`])
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.scripts.dest))
 }

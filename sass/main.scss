@@ -18,7 +18,7 @@ body{
     top: 0;
     left: -50vw;
     z-index: -1;
-    background: url(../images/bg-hog-2.png) 50% calc(-50vh - 150px) no-repeat;
+    background: url(../images/bg-hog.png) 50% calc(-50vh - 150px) no-repeat;
     background-size: auto;
     transform: rotate(var(--angle));
     color: #333;
@@ -67,7 +67,7 @@ body{
 
 @-webkit-keyframes sideWays {
   0% {
-    margin-left:0px;
+    margin-left:0;
   }
   100% {
     margin-left:50px;
@@ -76,7 +76,7 @@ body{
 
 @-moz-keyframes sideWays {
   0% {
-    margin-left:0px;
+    margin-left:0;
   }
   100% {
     margin-left:50px;
@@ -85,7 +85,7 @@ body{
 
 @keyframes sideWays {
   0% {
-    margin-left:0px;
+    margin-left:0;
   }
   100% {
     margin-left:50px;
@@ -230,7 +230,7 @@ body{
 
   //-webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
   //-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 3px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), inset 0 1px 3px 1px rgba(255, 255, 255, 1);
 
   height: 20px;
   position: absolute;
@@ -314,7 +314,7 @@ body{
         border-radius: 50%;
         margin: 16px 16px;
         &:active{
-          background-attachment: red;
+          //background-attachment: red;
         }
       }
     }
@@ -341,7 +341,6 @@ nav{
 
 //front page
 .front-screen{
-  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
   overflow: hidden;
@@ -478,7 +477,6 @@ nav{
 }
 .fact-sup{
   font-family: 'Gobold',sans-serif;
-  font-size: 95px;
   font-weight: 100;
   letter-spacing: -6px;
   color: $darkFont;
@@ -496,15 +494,24 @@ nav{
 
 .articles-screen{
   background-color: $articlesBgColor;
-  padding: 88px 0 48px;
+  padding: 16px 0 48px;
   overflow: hidden;
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .article-box{
+    position: relative;
+    padding-top: 77px;
+  }
 }
 .article-slider{
-  max-width: 955px;
+  //max-width: 955px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   .article-img{
+    display: block;
     max-width: 48%;
     img{
       width: 100%;
@@ -531,7 +538,7 @@ nav{
       margin: 0;
       font-family: Gobold,sans-serif;
     }
-    h7{
+    .h7{
       font-size: 12px;
       font-family: Gobold,sans-serif;
     }
@@ -847,7 +854,7 @@ nav{
     height: 400vh;
     left: -150vw;
     top: -150vh;
-    background: url(../images/bg-hog-2.png) center center no-repeat;
+    background: url(../images/bg-hog.png) center center no-repeat;
     background-size: contain;
     transition: 0.05s ease-in-out;
   }
