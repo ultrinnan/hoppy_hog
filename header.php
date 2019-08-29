@@ -22,13 +22,22 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
 <!--        <div class="beer-hog-before" id="hog">-->
     <header class="fixed-header">
         <div class="wrapper">
+            <?php
+            if (!is_front_page()){
+                echo '<a class="home-url" href="' . home_url() . '">На головну</a>';
+            }
+            ?>
             <div class="top-navigation">
                 <nav class="social-nav">
                     <a target="_blank" class="social-nav__item fb" href="<?=$facebook?>"></a>
                     <a target="_blank" class="social-nav__item ig" href="<?=$instagram?>"></a>
                     <a target="_blank" class="social-nav__item yt" href="<?=$youtube?>"></a>
                 </nav>
-                <nav id="dot-nav"></nav>
+	            <?php
+	            if (is_front_page()){
+		            echo '<nav id="dot-nav"></nav>';
+	            }
+	            ?>
             </div>
         </div>
     </header>
