@@ -135,17 +135,25 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
         <div class="trigger-screen">
             <div class="wrapper">
                 <div class="trigger">
-                    <h4 class="trigger-header">Расширяющиеся горизонты</h4>
+	                <?php
+	                // query for the about page
+	                $horizonts = new WP_Query('pagename=horizonts');
+	                // "loop" through query (even though it's just one page)
+	                while ($horizonts->have_posts()) : $horizonts->the_post();
+	                    $title = get_the_title();
+		                $content = get_the_content();
+	                endwhile;
+	                // reset post data (important!)
+	                wp_reset_postdata();
+	                ?>
+                    <h4 class="trigger-header">
+                        <?=$title;?>
+                    </h4>
                     <div class="trigger-txt">
-                        <h4 class="trigger-header-left">Расширяющиеся</h4>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facere ipsam quaerat quisquam temporibus. Dicta, dolor eveniet ex explicabo impedit magnam non obcaecati pariatur placeat provident quam repudiandae ullam voluptatem.
-                    </div>
-                    <div class="trigger-img">
-                        <img src="/wp-content/themes/hoppy_hog/images/trigger-bottle.png" alt="beer">
-                    </div>
-                    <div class="trigger-txt">
-                        <h4 class="trigger-header-right">горизонты</h4>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor eos eveniet illo impedit magnam quia quibusdam repellat rerum tempora? Accusantium autem facilis magni maiores minus molestiae saepe sequi temporibus.
+                        <?=$content;?>
+                        <div class="trigger-img">
+                            <img src="/wp-content/themes/hoppy_hog/images/trigger-bottle.png" alt="beer">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,20 +171,6 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
             // reset post data (important!)
             wp_reset_postdata();
             ?>
-        </div>
-
-        <div class="wrapper">
-            <div class="main-video">
-                <iframe width="820" height="400" src="https://www.youtube.com/embed/xzIt3Q7uaAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="about-company">
-                <h4>Hoppy Hog Family Brewery</h4>
-                <div class="about-company-txt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit </p>
-                    <p>voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                </div>
-
-            </div>
         </div>
     </section>
     <section class="gallery-screen" id="gallery">

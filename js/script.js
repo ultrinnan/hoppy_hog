@@ -95,9 +95,9 @@ jQuery(document).ready(function($) {
             const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
             if ('requestAnimationFrame' in window === false) {
                 window.scroll(0, destinationOffsetToScroll);
-                if (callback) {
-                    callback();
-                }
+                // if (callback) {
+                //     callback();
+                // }
                 return;
             }
             function scroll() {
@@ -106,9 +106,9 @@ jQuery(document).ready(function($) {
                 const timeFunction = easings[easing](time);
                 window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
                 if (window.pageYOffset === destinationOffsetToScroll) {
-                    if (callback) {
-                        callback();
-                    }
+                    // if (callback) {
+                    //     callback();
+                    // }
                     return;
                 }
                 requestAnimationFrame(scroll);
@@ -156,7 +156,7 @@ jQuery(document).ready(function($) {
                 dotCreate.id = 'dot-' + i;
                 dotCreate.classList.add('dots');
                 dotCreate.href = '#';
-                dotCreate.setAttribute('data-sec', '"'+i+'"');
+                dotCreate.setAttribute('data-sec', i);
                 nav.appendChild(dotCreate);
             }
         };

@@ -36,7 +36,7 @@ p{
     top: 0;
     left: -50vw;
     z-index: -1;
-    background: url(../images/bg-hog.png) 50% calc(-50vh - 150px) no-repeat;
+    background: url(../images/bg-hog-2.png) 50% calc(-50vh - 150px) no-repeat;
     background-size: auto;
     transform: rotate(var(--angle));
     color: #333;
@@ -395,7 +395,7 @@ nav{
   }
 }
 
-//front page
+//---------front page-----------
 .front-screen{
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
@@ -482,8 +482,10 @@ nav{
     display: inline-block;
     margin-bottom: 24px;
     cursor: pointer;
+    text-decoration: none;
     img{
       max-width: max-content;
+      display: block;
     }
     span{
       color: #cdb9a3;
@@ -506,9 +508,11 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    .textwidget{
+      max-width: 30%;
+    }
   }
   .fact{
-    max-width: 30%;
   }
 }
 .fact-img{
@@ -631,48 +635,61 @@ nav{
 .trigger{
   max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   font-family: Cambria, sans-serif;
   font-size: 15px;
   color: #fff;
-  .trigger-img{
-    flex: 0 0 160px;
-    img{
-      width: 180%;
-      margin-left: -45%;
-    }
-  }
   h4{
     font-family: Cambria, sans-serif;
     font-size: 28px;
     font-weight: 900;
     color: #cdbca3;
+    text-align: center;
   }
 }
 
 .trigger-screen{
   background: linear-gradient(to bottom, transparent 0%, transparent 70%, $factsBgColor  70%, $factsBgColor 100%);
 }
-.trigger-header{
-  display: none;
+.trigger-txt{
+  position: relative;
+  p{
+    columns: 2;
+    column-gap: 200px;
+  }
 }
-.trigger-header-left{
-  text-align: right;
-  margin: 8px -72px 16px;
+.trigger-img{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  top: 0;
+  img{
+    height: 100%;
+  }
 }
-.trigger-header-right{
-  margin: 8px -16px 16px;
-}
-
 
 .about-company-screen{
   background-color: $factsBgColor;
   padding: 32px 0 64px;
+  .wrapper{
+    figcaption{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: $aboutFontColor;
+      margin: 1.33em 0;
+    }
+    p{
+      max-width: 800px;
+      margin: 0 auto;
+      columns: 2;
+    }
+  }
 }
 .about-company{
-  h4{
+  h4,
+  figcaption{
     text-align: center;
     font-size: 20px;
     font-weight: 900;
@@ -691,12 +708,18 @@ nav{
   max-width: 800px;
   margin: 0 auto;
 }
-.main-video{
+.wp-block-embed{
+  text-align: center;
+}
+.main-video,
+.wp-block-embed__wrapper{
   max-width: 820px;
+  height: 400px;
   margin: 0 auto;
   padding: 32px 0 0;
   iframe{
     width: 100%;
+    height: 100%;
   }
 }
 .gallery-screen{
@@ -756,6 +779,7 @@ nav{
   text-transform: capitalize;
   max-width: 400px;
   text-align: right;
+  color: #fff;
   .light{
     font-size: 46px;
     margin: 0;
@@ -922,7 +946,7 @@ nav{
     height: 400vh;
     left: -150vw;
     top: -150vh;
-    background: url(../images/bg-hog.png) center center no-repeat;
+    background: url(../images/bg-hog-2.png) center center no-repeat;
     background-size: contain;
     transition: 0.05s ease-in-out;
   }
