@@ -175,72 +175,9 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
     </section>
     <section class="gallery-screen" id="gallery">
         <div class="wrapper">
-            <?php
-            if ( is_active_sidebar( 'gallery' ) ) {
-                dynamic_sidebar( 'gallery' );
-            }
-            ?>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <a href="images/1.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/1.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/2.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/3.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/3.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/4.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/4.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/5.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/5.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/6.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/6.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/7.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/7.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/8.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/8.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/9.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/9.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/10.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/10.jpg" alt="">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/12.jpg" data-fancybox="images">
-                        <img src="/wp-content/themes/hoppy_hog/images/12.jpg" alt="">
-                    </a>
-                </div>
-                <div class="insta-link">
-                    <span>больше фотографий</span>
-                    <a href="https://www.instagram.com/hoppyhog/">@HoppyHog</a>
-                </div>
-            </div>
+	        <?php if (have_posts()): while (have_posts()): the_post(); ?>
+		        <?php the_content(); ?>
+	        <?php endwhile; endif; ?>
         </div>
     </section>
     <section class="principle-screen">
