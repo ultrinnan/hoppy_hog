@@ -181,30 +181,24 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
         </div>
     </section>
     <section class="principle-screen">
-        <div class="witch-screen">
+	    <?php
+	    // query for the page
+	    $principles = new WP_Query('pagename=principles');
+	    // "loop" through query (even though it's just one page)
+	    while ($principles->have_posts()) : $principles->the_post();
+		    $thumb = get_the_post_thumbnail_url();
+		    $content = get_the_content();
+	    endwhile;
+	    // reset post data (important!)
+	    wp_reset_postdata();
+	    ?>
+        <div class="witch-screen" style="background: url(<?=$thumb;?>) 50% 100% no-repeat;">
             <div class="wrapper">
                 <div class="principles">
-                    <?php
-                    // query for the page
-                    $principles = new WP_Query('pagename=principles');
-                    // "loop" through query (even though it's just one page)
-                    while ($principles->have_posts()) : $principles->the_post();
-                        the_content();
-                    endwhile;
-                    // reset post data (important!)
-                    wp_reset_postdata();
-                    ?>
-                </div>
-                <div class="main-principle">
-                    <?php
-                    if ( is_active_sidebar( 'principles' ) ) {
-                        dynamic_sidebar( 'principles' );
-                    }
-                    ?>
+                    <?=$content;?>
                 </div>
             </div>
         </div>
-
     </section>
     <section class="form-screen" id="form">
         <div class="wrapper">
