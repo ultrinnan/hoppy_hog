@@ -111,7 +111,7 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
                             <div class="article-txt">
 				                <?=$content;?>
                             </div>
-                            <a href="<?=$url;?>" class="about-button">читати далі</a>
+                            <a href="<?=$url;?>" class="about-button">Читать дальше</a>
                         </div>
                     </article>
                 </div>

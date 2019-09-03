@@ -232,7 +232,16 @@ table {
   src: url("../fonts/besom/Besom.ttf") format("truetype"); }
 
 body {
-  background: #00181f; }
+  background: #00181f;
+  font-family: Cambria, sans-serif;
+  font-size: 15px; }
+
+h1, h2 {
+  font-family: Cambria, sans-serif;
+  color: #d3bda3; }
+
+.center {
+  text-align: center; }
 
 p {
   margin-top: 0; }
@@ -318,7 +327,7 @@ p {
 /* ANIMATIONS */
 .x1 {
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 29%;
+  left: 62%;
   top: 5%;
   transform: scale(0.6); }
 
@@ -326,7 +335,7 @@ p {
   -webkit-animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 36%;
+  left: 44%;
   top: 80%;
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -336,7 +345,7 @@ p {
   -webkit-animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 56%;
+  left: 37%;
   top: 40%;
   -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
@@ -346,7 +355,7 @@ p {
   -webkit-animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
   animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
-  left: 41%;
+  left: 43%;
   top: 0;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -356,7 +365,7 @@ p {
   -webkit-animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 59%;
+  left: 63%;
   top: 50%;
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -366,7 +375,7 @@ p {
   -webkit-animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 53%;
+  left: 57%;
   top: 0;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
@@ -376,7 +385,7 @@ p {
   -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 40%;
+  left: 67%;
   top: 70%;
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -386,7 +395,7 @@ p {
   -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
   animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-  left: 53%;
+  left: 57%;
   top: 10%;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -396,7 +405,7 @@ p {
   -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 41%;
+  left: 29%;
   top: 50%;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -406,7 +415,7 @@ p {
   -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 61%;
+  left: 33%;
   top: 80%;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -452,6 +461,8 @@ p {
   top: 0;
   right: 0;
   width: 100%; }
+  .fixed-header .wrapper {
+    padding: 8px 24px; }
 
 .top-navigation {
   display: flex;
@@ -518,15 +529,18 @@ nav#dot-nav {
     position: absolute;
     top: 0; }
   .section.title .wrapper {
-    position: relative; }
+    position: relative;
+    padding: 8px 24px; }
   .section.title h1 {
     font-family: Gobold,sans-serif;
     font-weight: 300;
+    font-size: 72px;
     color: #d3bda3;
-    padding: 16px 0; }
+    text-align: center;
+    padding: 0; }
 
 .section.content .wrapper {
-  padding: 40px 16px;
+  padding: 40px 24px;
   color: white; }
   .section.content .wrapper p {
     line-height: 1.5; }
@@ -586,7 +600,8 @@ nav#dot-nav {
 .sorts-screen {
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  padding-bottom: 158px; }
   .sorts-screen:after {
     content: '';
     width: 833px;
@@ -609,8 +624,7 @@ nav#dot-nav {
 
 .sorts {
   columns: 3;
-  text-align: center;
-  padding-bottom: 158px; }
+  text-align: center; }
   .sorts .sort-box {
     display: inline-block;
     margin-bottom: 24px;
@@ -837,6 +851,9 @@ nav#dot-nav {
 
 .gallery-screen {
   background: linear-gradient(to bottom, #6b5b4b 0%, #6b5b4b 15%, #1f1e22 15%, #1f1e22 100%); }
+  .gallery-screen .wrapper {
+    max-width: 1350px;
+    padding-bottom: 56px; }
 
 .gallery {
   column-count: 4;
@@ -848,7 +865,8 @@ nav#dot-nav {
   font-size: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  text-decoration: none; }
   .insta-link span {
     color: #6d4e34; }
   .insta-link a {
@@ -870,8 +888,8 @@ nav#dot-nav {
     width: 100%;
     height: 100%;
     background: url("../images/witch-2.png") 50% 100% no-repeat;
-    background-size: contain;
-    padding-bottom: 250px; }
+    padding-bottom: 240px;
+    min-height: 430px; }
 
 .principles {
   display: flex;
@@ -903,21 +921,29 @@ nav#dot-nav {
 
 .form-screen {
   background: #000; }
-  .form-screen form {
-    max-width: 45%;
-    padding-left: 32px; }
+  .form-screen .wrapper {
+    max-width: 690px;
+    padding: 56px 0 46px; }
   .form-screen .form-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; }
+    .form-screen .form-box .form-content {
+      max-width: 60%; }
+    .form-screen .form-box .intro {
+      display: block;
+      margin-bottom: -10px; }
     .form-screen .form-box span {
       color: #6c5c4c; }
   .form-screen .credentials {
-    max-width: 30%; }
+    max-width: 36%;
+    color: white; }
     .form-screen .credentials .form-logo {
-      text-align: center;
-      margin-bottom: 32px; }
+      margin-bottom: 44px; }
+    .form-screen .credentials .social-nav {
+      position: relative;
+      right: auto; }
   .form-screen a {
     color: #fff;
     text-decoration: none; }
@@ -929,7 +955,7 @@ nav#dot-nav {
       color: #fff; }
   .form-screen label {
     display: block;
-    margin: 20px 0; }
+    margin: 0 0 -12px; }
   .form-screen textarea {
     height: 260px; }
   .form-screen input {
@@ -940,13 +966,16 @@ nav#dot-nav {
     background: #1f1e22;
     box-sizing: border-box;
     border: none;
-    color: #d3bda3; }
+    color: #d3bda3;
+    font-family: Cambria, sans-serif;
+    font-size: 20px; }
     .form-screen input::placeholder, .form-screen textarea::placeholder {
-      color: #d3bda3; }
+      color: #d3bda3;
+      font-family: Cambria, sans-serif; }
   .form-screen .about-button {
     width: 375px;
     font-size: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 6px;
     text-transform: uppercase; }
 
 .phone {
@@ -958,11 +987,14 @@ nav#dot-nav {
   font-size: 16px;
   margin-bottom: 0; }
 
+footer .wrapper {
+  max-width: 780px; }
+
 .footer-box {
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  margin-bottom: 32px;
+  padding: 36px 0 0 24px;
+  margin-bottom: 58px;
   flex-wrap: wrap; }
   .footer-box > li > a {
     font-family: 'Gobold', sans-serif;
@@ -975,7 +1007,7 @@ nav#dot-nav {
     display: block;
     text-decoration: none;
     color: #fff;
-    margin-bottom: 16px; }
+    margin-bottom: 12px; }
     .footer-box a:hover {
       color: #d3bda3; }
 
@@ -1003,13 +1035,18 @@ nav#dot-nav {
   justify-content: center;
   color: #6c5c4c;
   font-size: 12px;
-  margin: 32px 0; }
+  margin: 32px 0 8px; }
+  .footer-credentials .creators {
+    font-size: 75%;
+    opacity: 0.5; }
   .footer-credentials span {
     margin: 8px 0 0; }
   .footer-credentials a {
     text-decoration: none;
     color: #6c5c4c;
     font-size: 12px; }
+    .footer-credentials a:hover {
+      color: white; }
 
 .gt3-photo-gallery-pro--isotope_gallery .img-wrapper img {
   height: auto; }
@@ -1034,21 +1071,21 @@ nav#dot-nav {
   .x2 {
     left: 50%; }
   .x3 {
-    left: 54%; }
+    left: 48%; }
   .x4 {
     left: 54%; }
   .x5 {
-    left: 46%; }
+    left: 47%; }
   .x6 {
-    left: 48%; }
+    left: 51%; }
   .x7 {
-    left: 46%; }
+    left: 47%; }
   .x8 {
-    left: 52%; }
+    left: 47%; }
   .x9 {
-    left: 48%; }
+    left: 49%; }
   .x10 {
-    left: 54%; }
+    left: 48%; }
   .description {
     columns: auto; }
   .sorts {

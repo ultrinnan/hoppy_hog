@@ -24,7 +24,7 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
         <div class="wrapper">
             <?php
             if (!is_front_page()){
-                echo '<a class="home-url" href="' . home_url() . '">На головну</a>';
+                echo '<a class="home-url" href="' . home_url() . '">На главную</a>';
             }
             ?>
             <div class="top-navigation">

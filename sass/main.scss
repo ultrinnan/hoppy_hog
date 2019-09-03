@@ -3,6 +3,16 @@
 @import "typography";
 body{
   background: $bgColor;
+  font-family: Cambria, sans-serif;
+  font-size: 15px;
+}
+h1,h2{
+  font-family: Cambria, sans-serif;
+  color: #d3bda3;
+}
+
+.center{
+  text-align: center;
 }
 
 p{
@@ -288,6 +298,9 @@ p{
   top:0;
   right:0;
   width: 100%;
+  .wrapper{
+    padding: 8px 24px;
+  }
 }
 .top-navigation{
   display: flex;
@@ -374,18 +387,21 @@ nav{
   }
   .wrapper{
     position: relative;
+    padding: 8px 24px;
   }
   h1{
     font-family: Gobold,sans-serif;
     font-weight: 300;
+    font-size: 72px;
     color: #d3bda3;
-    padding: 16px 0;
+    text-align: center;
+    padding: 0;
   }
 }
 
 .section.content{
   .wrapper{
-    padding: 40px 16px;
+    padding: 40px 24px;
     color: white;
     p{
       line-height: 1.5;
@@ -454,6 +470,7 @@ nav{
   background: url("../images/sorts-bg.png") 50% 0 no-repeat;
   background-size: cover;
   position: relative;
+  padding-bottom: 158px;
   &:after{
     content: '';
     width: 833px;
@@ -479,7 +496,6 @@ nav{
 .sorts{
   columns: 3;
   text-align: center;
-  padding-bottom: 158px;
   .sort-box{
     display: inline-block;
     margin-bottom: 24px;
@@ -747,6 +763,10 @@ nav{
 }
 .gallery-screen{
   background: linear-gradient(to bottom, $factsBgColor 0%, $factsBgColor 15%, $galleryBgColor  15%, $galleryBgColor 100%);
+  .wrapper{
+    max-width: 1350px;
+    padding-bottom: 56px;
+  }
 }
 .gallery{
   column-count: 4;
@@ -760,6 +780,7 @@ nav{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  text-decoration: none;
   span{
     color:#6d4e34;
   }
@@ -784,8 +805,8 @@ nav{
     width: 100%;
     height: 100%;
     background:  url("../images/witch-2.png") 50% 100% no-repeat;
-    background-size: contain;
-    padding-bottom: 250px;
+    padding-bottom: 240px;
+    min-height: 430px;
   }
 }
 .principles{
@@ -822,25 +843,36 @@ nav{
 
 .form-screen{
   background: #000;
-  form{
-    max-width: 45%;
-    padding-left: 32px;
+  .wrapper{
+    max-width: 690px;
+    padding: 56px 0 46px;
   }
   .form-box{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    .form-content{
+      max-width: 60%;
+    }
+    .intro{
+      display: block;
+      margin-bottom: -10px;
+    }
     span{
       color: #6c5c4c;
     }
   }
 
   .credentials{
-    max-width: 30%;
+    max-width: 36%;
+    color: white;
     .form-logo{
-      text-align: center;
-      margin-bottom: 32px;
+      margin-bottom: 44px;
+    }
+    .social-nav{
+      position: relative;
+      right: auto;
     }
   }
   a{
@@ -858,7 +890,7 @@ nav{
   }
   label{
     display: block;
-    margin: 20px 0;
+    margin: 0 0 -12px;
 
   }
   textarea{
@@ -874,14 +906,17 @@ nav{
     box-sizing: border-box;
     border: none;
     color: $articlesBgColor;
+    font-family: Cambria, sans-serif;
+    font-size: 20px;
     &::placeholder{
       color: $articlesBgColor;
+      font-family: Cambria, sans-serif;
     }
   }
   .about-button{
     width: 375px;
     font-size: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 6px;
     text-transform: uppercase;
   }
 }
@@ -894,11 +929,17 @@ nav{
   font-size: 16px;
   margin-bottom: 0;
 }
+
+footer{
+  .wrapper{
+    max-width: 780px;
+  }
+}
 .footer-box{
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  margin-bottom: 32px;
+  padding: 36px 0 0 24px;
+  margin-bottom: 58px;
   flex-wrap: wrap;
   >li>a{
     font-family: 'Gobold', sans-serif;
@@ -912,7 +953,7 @@ nav{
     display: block;
     text-decoration: none;
     color: #fff;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     &:hover{
       color: #d3bda3;
     }
@@ -945,7 +986,11 @@ nav{
   justify-content: center;
   color: #6c5c4c;
   font-size: 12px;
-  margin: 32px 0;
+  margin: 32px 0 8px;
+  .creators{
+    font-size: 75%;
+    opacity: 0.5
+  }
   span{
     margin: 8px 0 0;
   }
@@ -953,6 +998,9 @@ nav{
     text-decoration: none;
     color: #6c5c4c;
     font-size: 12px;
+    &:hover{
+      color: white;
+    }
   }
 }
 .gt3-photo-gallery-pro--isotope_gallery .img-wrapper img{
