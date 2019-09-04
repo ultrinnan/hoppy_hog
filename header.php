@@ -15,6 +15,7 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
     <title>
         <?php wp_title(); ?>
     </title>
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
     <?php wp_head(); ?>
 </head>
 <body>

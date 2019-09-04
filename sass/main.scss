@@ -436,7 +436,7 @@ nav{
     color: $bgColor;
     font-size: 35px;
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 50%;
     text-align: center;
     margin-left: -90px;
@@ -502,8 +502,8 @@ nav{
     cursor: pointer;
     text-decoration: none;
     img{
-      max-width: max-content;
       display: block;
+      width: 100%;
     }
     span{
       color: #cdb9a3;
@@ -654,7 +654,7 @@ nav{
 .main-slider-screen{
   background: linear-gradient(to bottom, $articlesBgColor 0%, $articlesBgColor 50%, transparent  50%, transparent 100%); ;
   .wrapper{
-    max-width: 1350px;
+    max-width: 100%;
   }
 }
 .main-slider{
@@ -764,7 +764,7 @@ nav{
 .gallery-screen{
   background: linear-gradient(to bottom, $factsBgColor 0%, $factsBgColor 15%, $galleryBgColor  15%, $galleryBgColor 100%);
   .wrapper{
-    max-width: 1350px;
+    max-width: 100%;
     padding-bottom: 56px;
   }
 }
@@ -788,6 +788,8 @@ nav{
     color: $articlesBgColor;
     position: relative;
     margin-left: 24px;
+    margin-right: 8px;
+    text-decoration: none;
     &:before{
       content: '';
       width: 16px;

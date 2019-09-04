@@ -1,6 +1,7 @@
 <?php get_header();
 $gen_options = get_option('general_options');
 
+$address = isset($gen_options['address']) ? $gen_options['address'] : '';
 $phone = isset($gen_options['phone']) ? $gen_options['phone'] : '';
 $email = isset($gen_options['email']) ? $gen_options['email'] : '';
 
@@ -142,6 +143,7 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
 	                while ($horizonts->have_posts()) : $horizonts->the_post();
 	                    $title = get_the_title();
 		                $content = get_the_content();
+		                $thumb = get_the_post_thumbnail_url();
 	                endwhile;
 	                // reset post data (important!)
 	                wp_reset_postdata();
@@ -152,7 +154,7 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
                     <div class="trigger-txt">
                         <?=$content;?>
                         <div class="trigger-img">
-                            <img src="/wp-content/themes/hoppy_hog/images/trigger-bottle.png" alt="beer">
+                            <img src="<?=$thumb;?>" alt="beer">
                         </div>
                     </div>
                 </div>
@@ -213,8 +215,7 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
                         <img src="/wp-content/themes/hoppy_hog/images/form-logo.png" alt="hoppy hog">
                     </div>
                     <p class="address">
-                        Семейная крафтовая пивоварня
-                        <strong>"Хмельной Кабан"</strong>, Одесса, Украина
+                        <?=stripslashes($address);?>
                     </p>
                     <p class="email">
                         <a href="mailto:<?=$email;?>"><?=$email;?></a>

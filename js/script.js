@@ -37,28 +37,25 @@ jQuery(document).ready(function($) {
     $(window).scroll(function () {
         if (scroller===true) {
             if( $(window).scrollTop() > 300 ) {
-                $({ n: 1 }).animate({ n: 25 }, {
+                let years_stop = $(".ben_years").html() *1;
+                $({ n: 1 }).animate({ n: years_stop }, {
                     duration: 3000,
                     step: function (a) {
                         $(".ben_years").html(a | 0);
                     }
                 });
-                $({ n: 1 }).animate({ n: 20 }, {
+                let ben_time = $(".ben_time").html() *1;
+                $({ n: 1 }).animate({ n: ben_time }, {
                     duration: 3000,
                     step: function (a) {
                         $(".ben_time").html(a | 0);
                     }
                 });
-                $({ n: 1 }).animate({ n: 17 }, {
+                let ben_parts = $(".ben_parts").html() *1;
+                $({ n: 1 }).animate({ n: ben_parts }, {
                     duration: 3000,
                     step: function (a) {
                         $(".ben_parts").html(a | 0);
-                    }
-                });
-                $({ n: 1 }).animate({ n: 5587 }, {
-                    duration: 3000,
-                    step: function (a) {
-                        $(".ben_tickets").html(a | 0);
                     }
                 });
                 scroller = false;
