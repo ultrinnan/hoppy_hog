@@ -654,7 +654,7 @@ nav{
 .main-slider-screen{
   background: linear-gradient(to bottom, $articlesBgColor 0%, $articlesBgColor 50%, transparent  50%, transparent 100%); ;
   .wrapper{
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 .main-slider{
@@ -764,7 +764,7 @@ nav{
 .gallery-screen{
   background: linear-gradient(to bottom, $factsBgColor 0%, $factsBgColor 15%, $galleryBgColor  15%, $galleryBgColor 100%);
   .wrapper{
-    max-width: 100%;
+    max-width: 80%;
     padding-bottom: 56px;
   }
 }
@@ -943,6 +943,9 @@ footer{
   padding: 36px 0 0 24px;
   margin-bottom: 58px;
   flex-wrap: wrap;
+  li{
+    padding-right: 8px;
+  }
   >li>a{
     font-family: 'Gobold', sans-serif;
     font-size: 17px;

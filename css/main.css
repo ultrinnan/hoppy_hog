@@ -327,7 +327,7 @@ p {
 /* ANIMATIONS */
 .x1 {
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 31%;
+  left: 28%;
   top: 5%;
   transform: scale(0.6); }
 
@@ -335,7 +335,7 @@ p {
   -webkit-animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 42%;
+  left: 35%;
   top: 80%;
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -345,7 +345,7 @@ p {
   -webkit-animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 63%;
+  left: 54%;
   top: 40%;
   -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
@@ -355,7 +355,7 @@ p {
   -webkit-animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
   animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
-  left: 56%;
+  left: 39%;
   top: 0;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -365,7 +365,7 @@ p {
   -webkit-animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 32%;
+  left: 36%;
   top: 50%;
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -375,7 +375,7 @@ p {
   -webkit-animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 36%;
+  left: 38%;
   top: 0;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
@@ -385,7 +385,7 @@ p {
   -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 32%;
+  left: 65%;
   top: 70%;
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -395,7 +395,7 @@ p {
   -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
   animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-  left: 69%;
+  left: 51%;
   top: 10%;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -405,7 +405,7 @@ p {
   -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 67%;
+  left: 59%;
   top: 50%;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -415,7 +415,7 @@ p {
   -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 30%;
+  left: 67%;
   top: 80%;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -757,7 +757,7 @@ nav#dot-nav {
 .main-slider-screen {
   background: linear-gradient(to bottom, #d3bda3 0%, #d3bda3 50%, transparent 50%, transparent 100%); }
   .main-slider-screen .wrapper {
-    max-width: 100%; }
+    max-width: 80%; }
 
 .main-slider {
   margin: 0 auto;
@@ -852,7 +852,7 @@ nav#dot-nav {
 .gallery-screen {
   background: linear-gradient(to bottom, #6b5b4b 0%, #6b5b4b 15%, #1f1e22 15%, #1f1e22 100%); }
   .gallery-screen .wrapper {
-    max-width: 100%;
+    max-width: 80%;
     padding-bottom: 56px; }
 
 .gallery {
@@ -998,6 +998,8 @@ footer .wrapper {
   padding: 36px 0 0 24px;
   margin-bottom: 58px;
   flex-wrap: wrap; }
+  .footer-box li {
+    padding-right: 8px; }
   .footer-box > li > a {
     font-family: 'Gobold', sans-serif;
     font-size: 17px;
@@ -1069,25 +1071,25 @@ footer .wrapper {
   #background-wrap {
     top: 50%; }
   .x1 {
-    left: 48%; }
+    left: 46%; }
   .x2 {
     left: 51%; }
   .x3 {
-    left: 55%; }
+    left: 48%; }
   .x4 {
-    left: 50%; }
-  .x5 {
-    left: 54%; }
-  .x6 {
-    left: 55%; }
-  .x7 {
-    left: 55%; }
-  .x8 {
     left: 53%; }
-  .x9 {
-    left: 52%; }
-  .x10 {
+  .x5 {
     left: 49%; }
+  .x6 {
+    left: 54%; }
+  .x7 {
+    left: 47%; }
+  .x8 {
+    left: 46%; }
+  .x9 {
+    left: 50%; }
+  .x10 {
+    left: 50%; }
   .description {
     columns: auto; }
   .sorts {
