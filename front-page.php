@@ -36,11 +36,9 @@ $youtube = isset($options['youtube']) ? $options['youtube'] : '';
                     <span>born to</span>
                     <strong class="brew">BREW</strong>
                     <span class="slogan-small">can't make it bad</span>
-                    <a class='go' href="#description">⌄</a>
                 </p>
             </div>
         </div>
-
     </section>
     <section class="sorts-screen">
         <div class="wrapper">
