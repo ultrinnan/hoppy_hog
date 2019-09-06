@@ -2,24 +2,17 @@
 
 jQuery(document).ready(function($) {
 
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
+    function correctHeight(){
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    $('[data-fancybox="images"]').fancybox({
-        buttons : [
-            // 'slideShow',
-            // 'share',
-            // 'zoom',
-            // 'fullScreen',
-            'close'
-        ],
-        // thumbs : {
-        //   autoStart : true
-        // }
-    });
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
 
-// ---------------
+    window.addEventListener("resize", function() {
+        // Get screen size (inner/outerWidth, inner/outerHeight)
+        correctHeight();
+    }, false);
 
     let hog = document.getElementById('hog');
 // if (window.DeviceOrientationEvent) {

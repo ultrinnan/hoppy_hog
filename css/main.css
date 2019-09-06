@@ -327,7 +327,7 @@ p {
 /* ANIMATIONS */
 .x1 {
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 69%;
+  left: 62%;
   top: 5%;
   transform: scale(0.6); }
 
@@ -335,7 +335,7 @@ p {
   -webkit-animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 16s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 67%;
+  left: 63%;
   top: 80%;
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -345,7 +345,7 @@ p {
   -webkit-animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 67%;
+  left: 32%;
   top: 40%;
   -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
@@ -355,7 +355,7 @@ p {
   -webkit-animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
   animation: animateBubble 18s linear infinite, sideWays 3s ease-in-out infinite alternate;
-  left: 62%;
+  left: 35%;
   top: 0;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -365,7 +365,7 @@ p {
   -webkit-animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 17s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 67%;
+  left: 41%;
   top: 50%;
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -375,7 +375,7 @@ p {
   -webkit-animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 49%;
+  left: 36%;
   top: 0;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
@@ -385,7 +385,7 @@ p {
   -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 67%;
+  left: 41%;
   top: 70%;
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -395,7 +395,7 @@ p {
   -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
   animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-  left: 31%;
+  left: 48%;
   top: 10%;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -405,7 +405,7 @@ p {
   -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
   animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-  left: 61%;
+  left: 59%;
   top: 50%;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -415,7 +415,7 @@ p {
   -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  left: 49%;
+  left: 37%;
   top: 80%;
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -747,7 +747,8 @@ nav#dot-nav {
   font-family: Gobold, sans-serif;
   font-size: 12px;
   padding: 4px 24px;
-  margin: 16px 0; }
+  margin: 16px 0;
+  display: inline-block; }
 
 .article-txt {
   margin-top: 13px;
@@ -783,18 +784,23 @@ nav#dot-nav {
     max-width: 960px; }
 
 .trigger-txt {
-  position: relative; }
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 260px; }
   .trigger-txt p {
     columns: 2;
-    column-gap: 200px; }
+    column-gap: 200px;
+    margin: 0;
+    z-index: 1; }
 
 .trigger-img {
   position: absolute;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 250px;
   max-height: 250px;
-  top: 0; }
+  bottom: 0; }
   .trigger-img img {
     height: 100%; }
 
@@ -1055,9 +1061,63 @@ footer .wrapper {
 .gt3-photo-gallery-pro--isotope_gallery .img-wrapper img {
   height: auto; }
 
+div.wpcf7-response-output {
+  color: white;
+  padding: 16px 8px;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 375px;
+  box-sizing: border-box; }
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 90%; }
+  .sorts-screen {
+    padding-bottom: 100px; }
+  .facts-screen .wrapper .textwidget {
+    display: flex; }
+  .facts-screen .fact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .articles-screen .wrapper {
+    max-width: 90%; }
+  .articles-screen .article-slider .article-img {
+    max-width: 48%;
+    padding: 1px; }
+  .articles-screen .article-slider .article-content {
+    max-width: 52%;
+    padding: 1px 16px;
+    box-sizing: border-box; }
+    .articles-screen .article-slider .article-content .art-logo {
+      right: 0; }
+    .articles-screen .article-slider .article-content h4 {
+      font-size: 32px;
+      line-height: 1; }
+  .trigger-screen .wrapper {
+    max-width: 90%; }
+  .principle-screen .witch-screen {
+    background-size: 100% !important;
+    padding-bottom: 64px; }
+  .form-screen .wrapper {
+    max-width: 90%; }
+  footer .wrapper {
+    max-width: 90%; }
+    footer .wrapper .footer-box {
+      padding: 32px 0 0;
+      margin: 0; } }
+
 @media only screen and (max-width: 500px) {
   .fixed-header .wrapper {
     padding: 0; }
+    .fixed-header .wrapper .social-nav {
+      right: 4px;
+      margin-top: 4px; }
+    .fixed-header .wrapper #dot-nav {
+      right: 0;
+      top: 32px; }
+      .fixed-header .wrapper #dot-nav a {
+        margin: 10px 5px; }
     .fixed-header .wrapper .main-nav__item a {
       margin: 16px 5px; }
   .beer-hog .beer-hog-before {
@@ -1071,100 +1131,128 @@ footer .wrapper {
   #background-wrap {
     top: 50%; }
   .x1 {
-    left: 47%; }
+    left: 50%; }
   .x2 {
     left: 51%; }
   .x3 {
-    left: 55%; }
+    left: 49%; }
   .x4 {
-    left: 49%; }
+    left: 54%; }
   .x5 {
-    left: 46%; }
+    left: 47%; }
   .x6 {
-    left: 52%; }
-  .x7 {
     left: 53%; }
+  .x7 {
+    left: 48%; }
   .x8 {
-    left: 49%; }
+    left: 48%; }
   .x9 {
-    left: 46%; }
+    left: 53%; }
   .x10 {
-    left: 52%; }
+    left: 53%; }
   .description {
     columns: auto; }
   .sorts {
     columns: auto; }
-    .sorts .sort-box span {
-      display: block;
-      margin: 0 auto; }
+    .sorts .sort-box {
+      margin-bottom: 40px; }
+      .sorts .sort-box span {
+        display: block;
+        margin: 0 auto; }
+  .sorts-screen .wrapper {
+    padding-bottom: 64px; }
   .sorts-screen:after {
-    width: 100%;
-    margin-left: -50%;
+    width: 150%;
+    margin-left: -75%;
     background-size: contain; }
   .facts-screen .wrapper {
     flex-direction: column; }
+    .facts-screen .wrapper .textwidget {
+      max-width: 100%; }
   .facts-screen .fact {
     max-width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column-reverse; }
+    .facts-screen .fact p {
+      margin-bottom: 32px; }
   .fact-img {
     width: 290px;
-    margin: unset; }
+    margin: 0;
+    padding: 0 0 8px; }
     .fact-img img {
       right: 8px;
+      bottom: 20px;
       left: auto; }
   .articles-screen {
-    padding: 88px 0 0;
+    padding: 0;
     margin-top: -1px; }
-  .article-slider {
-    flex-direction: column; }
-    .article-slider .article-img, .article-slider .article-content {
-      max-width: 100%; }
-    .article-slider .article-content .art-logo {
-      position: absolute;
-      top: -70px;
-      right: -42px;
-      transform: rotate(28deg); }
+    .articles-screen .slick-prev,
+    .articles-screen .slick-next {
+      display: none !important; }
+    .articles-screen .article-box {
+      padding-top: 40px; }
+    .articles-screen .article-slider {
+      flex-direction: column; }
+      .articles-screen .article-slider .article-img, .articles-screen .article-slider .article-content {
+        max-width: 100%;
+        padding: 8px 0; }
+        .articles-screen .article-slider .article-img .art-logo, .articles-screen .article-slider .article-content .art-logo {
+          display: none; }
+      .articles-screen .article-slider .article-content .art-logo {
+        position: absolute;
+        top: -70px;
+        right: -42px;
+        transform: rotate(28deg); }
   .trigger {
-    flex-direction: column;
-    text-align: center; }
+    flex-direction: column; }
     .trigger .trigger-header-left,
     .trigger .trigger-header-right {
       display: none; }
     .trigger .trigger-img {
-      order: 3;
-      margin: 32px 0 0; }
-      .trigger .trigger-img img {
-        width: 100%;
-        margin-left: 0; }
+      position: relative; }
     .trigger .trigger-header {
       display: block;
       margin: 0 0 32px; }
+    .trigger .trigger-txt {
+      flex-direction: column-reverse; }
+      .trigger .trigger-txt p {
+        columns: 1; }
+  .main-video, .wp-block-embed__wrapper {
+    height: 200px; }
+  .about-company-screen .wrapper p {
+    columns: 1; }
   .about-company-txt {
     flex-direction: column; }
     .about-company-txt p {
       max-width: 100%;
       text-align: center; }
   .about-button {
-    margin: 32px auto 0;
-    display: block; }
+    margin: 8px auto 0;
+    display: inline-block; }
   .gallery {
     column-count: auto; }
+  .principle-screen .witch-screen {
+    padding-bottom: 0;
+    min-height: 400px; }
   .principles {
     flex-direction: column;
     padding: 16px 0; }
     .principles p {
       max-width: 100%;
       margin: 0;
-      text-align: center; }
+      columns: 1; }
   .main-principle {
     text-align: center; }
   .form-screen .form-box {
     flex-direction: column; }
+    .form-screen .form-box .form-content {
+      max-width: 100%; }
     .form-screen .form-box span {
       display: block;
       text-align: center; }
+  .form-screen label {
+    margin-bottom: -24px; }
   .form-screen form {
     max-width: 100%;
     padding-left: 0; }
@@ -1182,12 +1270,12 @@ footer .wrapper {
   .form-screen .socials {
     margin: 24px auto;
     width: 88px; }
-  .footer-box {
-    text-align: center; } }
-
-div.wpcf7-response-output {
-  color: white;
-  padding: 16px 8px;
-  margin: 0;
-  width: 375px;
-  box-sizing: border-box; }
+  footer .wrapper .footer-box {
+    text-align: center;
+    flex-direction: column; }
+    footer .wrapper .footer-box > li {
+      padding: 0 0 24px; }
+    footer .wrapper .footer-box .sub-menu {
+      margin: 0 0 16px; }
+  footer .footer-credentials {
+    margin: 0; } }

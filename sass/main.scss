@@ -1,6 +1,7 @@
 @import 'normalize';
 @import 'variables';
 @import "typography";
+
 body{
   background: $bgColor;
   font-family: Cambria, sans-serif;
@@ -644,6 +645,7 @@ nav{
   font-size: 12px;
   padding: 4px 24px;
   margin: 16px 0;
+  display: inline-block;
 }
 .article-txt{
   margin-top: 13px;
@@ -687,18 +689,23 @@ nav{
 }
 .trigger-txt{
   position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 260px;
   p{
     columns: 2;
     column-gap: 200px;
+    margin: 0;
+    z-index: 1;
   }
 }
 .trigger-img{
   position: absolute;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 250px;
   max-height: 250px;
-  top: 0;
+  bottom: 0;
   img{
     height: 100%;
   }
@@ -1012,9 +1019,109 @@ footer{
   height: auto;
 }
 
+div.wpcf7-response-output{
+  color: white;
+  padding: 16px 8px;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 375px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1366px){
+
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper{
+    max-width: 90%;
+  }
+
+  .sorts-screen{
+    padding-bottom: 100px;
+  }
+
+  .facts-screen{
+    .wrapper{
+      .textwidget{
+        display: flex;
+      }
+    }
+    .fact{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .articles-screen{
+    .wrapper{
+      max-width: 90%;
+    }
+    .article-slider{
+      .article-img{
+        max-width: 48%;
+        padding: 1px;
+      }
+      .article-content{
+        max-width: 52%;
+        padding: 1px 16px;
+        box-sizing: border-box;
+        .art-logo{
+          right: 0;
+        }
+        h4{
+          font-size: 32px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .trigger-screen{
+    .wrapper{
+      max-width: 90%;
+    }
+  }
+
+  .principle-screen{
+    .witch-screen{
+      background-size: 100% !important;
+      padding-bottom: 64px;
+    }
+  }
+
+  .form-screen{
+    .wrapper{
+      max-width: 90%;
+    }
+  }
+
+  footer{
+    .wrapper{
+      max-width: 90%;
+      .footer-box{
+        padding: 32px 0 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width:500px){
   .fixed-header .wrapper{
     padding: 0;
+    .social-nav{
+      right: 4px;
+      margin-top: 4px;
+    }
+    #dot-nav{
+      right: 0;
+      top: 32px;
+      a{
+        margin: 10px 5px;
+      }
+    }
     .main-nav__item a{
       margin: 16px 5px;
     }
@@ -1075,71 +1182,114 @@ footer{
   }
   .sorts{
     columns: auto;
-    .sort-box span{
-      display: block;
-      margin: 0 auto;
+    .sort-box{
+      margin-bottom: 40px;
+      span{
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
-  .sorts-screen:after{
-    width: 100%;
-    margin-left: -50%;
-    background-size: contain;
+  .sorts-screen{
+    .wrapper{
+      padding-bottom: 64px;
+    }
+    &:after{
+      width: 150%;
+      margin-left: -75%;
+      background-size: contain;
+    }
   }
+
   .facts-screen {
     .wrapper{
       flex-direction: column;
+      .textwidget{
+        max-width: 100%;
+      }
     }
     .fact{
       max-width: 100%;
       text-align: center;
       display: flex;
       flex-direction: column-reverse;
+      p{
+        margin-bottom: 32px;
+      }
     }
   }
   .fact-img{
     width: 290px;
-    margin:unset;
+    margin:0;
+    padding: 0 0 8px;
     img{
       right: 8px;
+      bottom: 20px;
       left: auto;
     }
   }
   .articles-screen{
-    padding: 88px 0 0;
+    padding: 0;
     margin-top: -1px;
+    .slick-prev,
+    .slick-next{
+      display: none !important;
+    }
+    .article-box{
+      padding-top: 40px;
+    }
+    .article-slider{
+      flex-direction: column;
+      .article-img, .article-content{
+        max-width: 100%;
+        padding: 8px 0;
+        .art-logo{
+          display: none;
+        }
+      }
+      .article-content .art-logo {
+        position: absolute;
+        top: -70px;
+        right: -42px;
+        transform: rotate(28deg);
+      }
+    }
   }
-  .article-slider{
+
+  .trigger{
     flex-direction: column;
-    .article-img, .article-content{
-      max-width: 100%;
+    .trigger-header-left,
+    .trigger-header-right{
+      display: none;
     }
-    .article-content .art-logo {
-      position: absolute;
-      top: -70px;
-      right: -42px;
-      transform: rotate(28deg);
+    .trigger-img{
+      position: relative;
+      img{
+      }
     }
-  }
-.trigger{
-  flex-direction: column;
-  text-align: center;
-  .trigger-header-left,
-  .trigger-header-right{
-    display: none;
-  }
-  .trigger-img{
-    order: 3;
-    margin: 32px 0 0;
-    img{
-      width: 100%;
-      margin-left:0;
+    .trigger-header{
+      display: block;
+      margin: 0 0 32px;
+    }
+    .trigger-txt{
+      flex-direction: column-reverse;
+      p{
+        columns: 1;
+      }
     }
   }
-  .trigger-header{
-    display: block;
-    margin: 0 0 32px;
+
+  .main-video, .wp-block-embed__wrapper{
+    height: 200px;
   }
-}
+
+  .about-company-screen{
+    .wrapper{
+      p{
+        columns: 1;
+      }
+    }
+  }
   .about-company-txt{
     flex-direction: column;
     p{
@@ -1148,11 +1298,16 @@ footer{
     }
   }
   .about-button{
-    margin: 32px auto 0;
-    display: block;
+    margin: 8px auto 0;
+    display: inline-block;
   }
   .gallery{
     column-count: auto;
+  }
+
+  .principle-screen .witch-screen{
+    padding-bottom: 0;
+    min-height: 400px;
   }
   .principles{
     flex-direction: column;
@@ -1160,7 +1315,7 @@ footer{
     p{
       max-width: 100%;
       margin: 0;
-      text-align: center;
+      columns: 1;
     }
   }
   .main-principle{
@@ -1169,10 +1324,16 @@ footer{
   .form-screen{
     .form-box{
       flex-direction: column;
+      .form-content{
+        max-width: 100%;
+      }
       span{
         display: block;
         text-align: center;
       }
+    }
+    label{
+      margin-bottom: -24px;
     }
     form{
       max-width: 100%;
@@ -1198,15 +1359,25 @@ footer{
       width: 88px;
     }
   }
-  .footer-box{
-    text-align: center;
+  footer{
+    .wrapper{
+      .footer-box{
+        text-align: center;
+        flex-direction: column;
+        >li{
+          padding: 0 0 24px;
+        }
+        .sub-menu {
+          margin: 0 0 16px;
+        }
+      }
+    }
+    .footer-credentials{
+      margin: 0;
+    }
   }
 }
 
-div.wpcf7-response-output{
-  color: white;
-  padding: 16px 8px;
-  margin: 0;
-  width: 375px;
-  box-sizing: border-box;
+@media only screen and (max-width: 375px){
+
 }
