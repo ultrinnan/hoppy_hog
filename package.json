@@ -18,7 +18,7 @@
     "gulp-sass": "*",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-terser": "^1.2.0",
-    "jshint": "^2.10.1",
+    "jshint": "^2.13.6",
     "jshint-stylish": "^2.2.1"
   }
 }
